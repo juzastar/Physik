@@ -1,0 +1,114 @@
+%\documentclass[ngerman]{scrartcl}
+\documentclass[%
+	pdftex,%              PDFTex verwenden da wir ausschliesslich ein PDF erzeugen.
+	a4paper,%             Wir verwenden A4 Papier.
+	oneside,%             Einseitiger Druck.
+	12pt,              %  Grosse Schrift, besser geeignet f�r A4.
+	halfparskip,%         Halbe Zeile Abstand zwischen Abs�tzen.	
+	%chapterprefix,%       Kapitel mit 'Kapitel' anschreiben.
+	%headsepline,%         Linie nach Kopfzeile.
+	footsepline,%         Linie vor Fusszeile.	
+	%bibtotocnumbered,%    Literaturverzeichnis im Inhaltsverzeichnis nummeriert einf�gen.
+	idxtotoc%             Index ins Inhaltsverzeichnis einfügen.
+]{scrartcl}
+% Titel, Autor und Datum
+% zusäzliche Pakete einbinden
+\usepackage[ngerman]{babel}
+
+\usepackage[usenames,dvipsnames]{pstricks}
+\usepackage{float}
+\usepackage{epsfig}
+\usepackage{pstricks}
+
+%erweiterte Tabellen
+\usepackage{tabularx}
+
+
+\usepackage{fancybox}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb} 
+\usepackage{nicefrac}
+
+%erzeugt die Mengen $\mathds{R}^3$
+\usepackage{dsfont}
+%geschwungene Buchstaben \mathscr{F} 
+\usepackage{mathrsfs} 
+
+\usepackage[utf8x]{inputenc}
+%\usepackage[T1]{fontenc}
+\usepackage{ae}
+
+\usepackage{setspace}
+\usepackage[left=25mm,right=25mm,top=28mm,bottom=25mm,headheight=21pt,headsep=27pt,footskip=30pt]{geometry}
+\usepackage{blindtext}
+
+
+\usepackage{graphicx}
+
+%Packet für anklickbare Links
+\usepackage{hyperref}
+
+\usepackage[scaled=.85]{luximono}
+
+%\pagestyle{headings}
+
+%
+%  4. Stil der Überschriften auf normale Schrift.
+%     Wir verwenden für die Überschriften den selben Font wie für den Text.
+%
+%\setkomafont{chapter}{\Huge}
+\setkomafont{section}{\normalfont\bfseries\LARGE}
+\setkomafont{title}{\normalfont\Large\bfseries\Large}
+\setkomafont{subsection}{\normalfont\bfseries\large}
+\setkomafont{subsubsection}{\normalfont\bfseries}
+			
+
+
+
+\setkomafont{sectioning}{\normalfont\bfseries}       % Titel mit Normalschrift
+\setkomafont{captionlabel}{\normalfont\bfseries}     % Fette Beschriftungen 
+\setkomafont{pagehead}{\normalfont\itshape}          % Kursive Seitentitel
+\setkomafont{descriptionlabel}{\normalfont\bfseries} % Fette Beschreibungstitel
+
+
+%#uhrzeit
+\usepackage{scrtime}
+
+%Kopf- und Fußzeile
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+%\fancyhf{}
+ 
+%Kopfzeile mittig mit Kaptilname
+%\fancyhead[C]{\nouppercase{\leftmark}}
+%Linie oben
+%\renewcommand{\headrulewidth}{0.5pt}
+ 
+%Fußzeile links bzw. innen
+\fancyfoot[L]{Erstellt durch Florian Diekmann}
+%Fußzeile mittig (Seitennummer)
+\fancyfoot[C]{\thepage}
+%Linie unten
+\renewcommand{\footrulewidth}{0.5pt}
+ 
+% Fußzeile auf jeder Seite - auch Kapitel und Inhaltsverzeichnis
+%\fancypagestyle{plain}{%
+%   \fancyhf{}%
+%   \fancyhead[C]{} %Kapitelname ausblenden
+%   \fancyfoot[L]{Text muss hier stehen}
+%   \renewcommand{\headrulewidth}{0.0pt} %obere Linie ausblenden
+%   \fancyfoot[C]{\thepage}
+%}
+% anklickbare Links
+\definecolor{darkblue}{rgb}{0,0,.5}
+\hypersetup{pdftex=true}
+
+
+%%% eigene Macros
+%\newcommand{\1vec}[2]{\mathrel{\hat{\#1}_{\#2}} } %
+\newcommand{\entspricht}{\ensuremath{\mathrel{\widehat{=}}}} 
+\newcommand{\kreis}[1]{\unitlength1ex\begin{picture}(2.5,2.5)%
+\put(0.75,0.75){\circle{2.5}}\put(0.75,0.75){\makebox(0,0){#1}}\end{picture}}
+\newcommand{\grad}{\ensuremath{\mathrm{grad\,}}} 
+\newcommand{\Fdiv}{\ensuremath{\mathrm{div\,}}} 

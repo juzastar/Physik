@@ -1,0 +1,137 @@
+\section{Elektrostatik}\label{Elektrostatik}Massen erzeugen Gravitationsfelder, heiße Körper ein Temperaturfeld um sic, so erzeugen Ladungen in Analogie ein elektrisches Feld. So soll es hier primär in der Elektrostatik um die Betrachtung statischer elektrischer Ladungen gehen, die miteinander wechselwirken können. Diese Ladungen sind im Gegensatz zu bewegten Ladungen nicht frei beweglich.
+\subsection{Elektrische Ladungen}
+Es hat sich etabliert den Ladungen zwei Arten zuzuordnen. Damit folgt schon dieses Beispiel nicht mehr der Analogie zum Gravitationsfeld (die sich hauptsächlich  durch eine attraktive Wechselwirkung charakterisiert), indem man zwischen \textbf{negativen} und \textbf{positiven} \textit{Ladungsträgern} unterscheidet. Ladungen bleiben in abgeschlossenen Systemen stets erhalten und sind im Gegensatz zu Massen vom Bewegungszustand unabhängig, Ladungen müssen also vorwiegend nicht relativistisch betrachtet werden. Ausnahme bilden natürlich die Geschwindigkeit von Teilchen etc. \footnote{Dazu mehr in den Versuchen zu beschleunigten Elektronen in Fadenstrahlröhren}. \\
+\begin{center}\fbox{Gleichnamig Ladungen stoßen sich ab, ungleichnamige ziehen sich an}\end{center}
+%
+%
+\paragraph{Die Elementarladung} tritt anders als Masse vorwiegend in Quanten auf, also ganzzahligen Vielfachen der Elementarladung e
+\begin{align} \label{kons:Elementarladung}
+e = 1.602 \cdot 10^{-19} \, C  \quad \mathrm{(Coulomb)}
+\end{align}Selbst solche betragsmäßig kleinen Konstanten lassen sich heutzutage sehr genau bestimmen, die geschieht z.B. häufig anhand der Ergebnisse des \textit{Millikan Versuchs}. Überlegungen haben gezeigt, dass schon kleinste Abweichungen um den "`wahren Wert "' Kräfte hervorrufen müssten, die weit größer als die der Gravitationsfelder sein müssten.
+
+\subsection{Kraft zwischen zwei Ladungsträgern}
+Die Richtung der Wechselwirkung zwischen zwei Punktladungen erschließt sich aus ihrer Verbindungslinie. Dies scheint zunächst absolut selbstverständlich, warum sollte genau diese Kraft unserem Gefühl widersprechen? Gehen wir davon aus, dass der Raum isotrop ist (von ihm keine Wechselwirkung ausgeht) können wir unsere Vermutung stützen, doch mit solchen Überlegungen muss man stets vorsichtig sein.
+
+Das \textbf{Coulomb-Gesetz} beschreibt die Proportionalität der Kraft zwischen zwei Ladungen die gerade proportional aus dem Produkt beider Ladungen und umgekehrt proportional zum Radiusquadrat ist.
+\begin{align} \label{eqn:Coulomb-Gesetz}
+\boxed{ \vec{F} = \frac{1}{4\pi \varepsilon_{0}} \frac{q_1 Q_2}{r^2} \hat{r}}
+\end{align}Dabei heißt $\varepsilon_{0}$ Dielektrizitätskonstante bzw. Influenzkonstante mit\begin{align*}
+\varepsilon_{0} = 8.8542 \cdot 10^{-12} \,\mathrm{ \frac{As}{Vm}}
+\end{align*}
+\subsection{Das Elektrische Feld}Wir könnten das Elektrische Feld pragmatisch einführen als $\vec{F} = q\vec{E}$, doch dies ist zugegebener maßen für das weitere Verständnis nicht sehr förderlich. \par
+Treten Kräfte auf, obwohl der geladene Körper ruht, so sprechen wir von \textit{Coulomb-Kräften} und beschreiben das Gebiet, in dem diese Kraft auftritt als \textbf{elektrisches Feld}. \\Treten gleichzeitig Kräfte auf, obwohl der Ladungsträger nicht ruht, so sprechen wir hier von \textit{Lorentzkräften}, die zwar proportional zur Geschwindigkeit sind, jedoch vektormäßig senkrecht auf der Geschwindigkeit stehen. Wir sprechen hier von einer Kraftwirkung in einem \textit{Magnetfeld} \par
+Erfährt ein Körper in einem elektrischen Feld eine Kraft $\vec{F}$ mit der Ladung Q, so definieren wir die \textbf{elektrische Feldstärke} als \begin{align}
+\vec{E} &= \frac{\vec{F}}{Q} 
+\end{align}\begin{align} \label{eqn:elFeldstärke}
+		\boxed{\vec{E}= \frac{1}{4\pi \varepsilon_{0}} \frac{Q}{r^2} \hat{r}}
+\end{align} Nach unserer Definition für die elektrische Feldstärke ergibt sich eine Einheit in SI-Größen von \begin{align}\left[ E\right] = \frac{N}{C} = \frac{V}{m}
+\end{align}
+\paragraph{} Die für den gesamten $\mathds{R}^3$ definierte elektrische Feldstärke (die z.B. beim Schwerefeld durch $\vec{g}$ bezeichnet wird) ist ein \textbf{Vektorfeld}. Genau diese Eigenschaft der Vektorcharakteristik erschwert uns zunächst eine qualitative Beschreibung. Unter bestimmten Berücksichtigungen können wir jedoch Aussagen treffen. Als Hilfskonstrukt benutzt man so genannte \textbf{Feldlinien}, mit ihnen beschreibt man den Zustand an Äquivalenten Orten. Ihre Anzahl oder Zeichendichte ist willkürlich, kann demnach kein wirkliches Maß für die Feldstärke sein.
+\begin{figure}[h]
+\includegraphics[scale=0.5]{img/feldlinien_2gleicherLadungen}
+\caption{Feldlinienbild für zwei betragsgleiche Punktladungen mit unterschiedlichem Vorzeichen. Demtröder}
+\label{pic:Fedlinien-2gegenpolig}
+\end{figure}
+Solche Fedlinienbilder kennt man zu Genüge aus den meistens physikalischen Lehrbüchern und sollten jedem schon begegnet sein. Dabei vergisst man häufig, dass diese Art der Darstellung nur ein Schnittbild durch das dreidimensionale Feld ist. Damit geht natürlich zwangsläufig die Vergleichbarkeit im gesamten Raum verloren, die wir jedoch durch hoch symmetrische Felder zurückgewinnen können.\\ In Solchen Feldern werden positive Ladungen als Quellen und negative Ladungen als Senken bezeichnet. Elektrische Felder zeigen demnach immer von \textbf{postiven Ladungen hin zu negativen Ladungen}. \begin{quotation}Eine kleine Anekdote sei hier erlaubt und geht auf meinen alten (nun schon pensionierten) zurück. Sollte man einmal die Definition von Quellen und Senken vergessen haben, hilft das $\textbf{n}^4$-Gesetz weiter. Linie\textbf{n} münde\textbf{n} im grüne\textbf{n} Süde\textbf{n}. Und geht damit auf die alte schulische Erklärung von Magnetpolen und den ihn zugeordneten Farben \textit{rot} und \textit{grün} zurück.
+\end{quotation}
+
+\subsubsection{Feld einer homogenen Ladungsverteilung} Bisher haben wir uns hauptsächlich mit diskreten Ladungsverteilungen (Punktladungen) beschäftigt. Jede Berechnung von Ladungsverteilungen folgt dem gleichen Prinzip, egal ob langer Leiter oder eine Scheibe. Hier soll exemplarisch das Vorgehen für die Berechnung des Felds für einen unendlich lang ausgedehnten Draht mit der Probeladung $q_1$ durchgeführt werden. \begin{enumerate}
+\item Welche Kräfte wirken?
+\item Wie groß ist die Ladungsdichte?
+\item Integration über "`zerstückelte"' Flächen
+\end{enumerate}\begin{figure}\begin{center}
+\includegraphics[scale=0.25]{img/homogene_Ladungsverteilung}
+\end{center}
+\caption{Berechnung einer homogenen Ladungsverteilung eines Leiters}
+\label{pic:Ladungsverteilung}
+\end{figure}
+Zunächst sei gesagt, dass sich der Anteil des elektrischen Feldes stets aus den zwei grundlegenden Richtungen x,y durch vektorielle Addition ableiten lässt. So ergibt sich \begin{align*}
+\vec{dE} = \vec{dE}_x + \vec{dE}_y
+\end{align*}Schon durch Symmetriebetrachtungen kann man sich überlegen, dass man von jedem Punkt des Leiters eine Linie hin zur Probeladung ziehen kann. Genau diese horizontalen Komponenten heben sich gegenseitig auf, wir können also schreiben
+\begin{align*}
+\vec{dE} = \vec{dE}_y
+\end{align*} Denkt man sich das Vektordreieck, so ist $dE_y = dE \cos \alpha$. Der Betrag des elektrischen Feldes erschließt sich nach (\ref{eqn:elFeldstärke}) mit $r=b$ zu\begin{align}
+dE_y = \frac{1}{4\pi \epsilon_{0}} \frac{dQ}{b^2} \cos \alpha
+\end{align} Aus der Abbildung \ref{pic:Ladungsverteilung} zeigt sich $b = \frac{a}{\cos \alpha}$ \begin{align*}
+dE_y = \frac{1}{4\pi \epsilon_{0}} \frac{dQ}{a^2} \cos^3 \alpha
+\end{align*} Für jede Ladungsverteilung gibt es verschiedene Quotienten. Ab folgend nun die Linien, Flächen und Volumenladungsdichte\begin{align}
+\lambda &= \frac{dQ}{dL}\\
+\sigma 	&=\frac{dQ}{dA}\\
+\rho 	&=\frac{dQ}{dV}
+\end{align}Im unseren Fall handelt es sich um eine Linienladungsdichte, mit $dL = dx$ und $x = a \tan \alpha$ bzw. $dx = \frac{a}{cos^2 \alpha} d\alpha$\begin{align}
+dE_y = \frac{1}{4\pi \epsilon_{0}} \frac{\lambda \cos \alpha}{a} d\alpha
+\end{align}Um das gesamte elektrische Feld zu bekommen, integrieren wir über alle Winkel zwischen $-\tfrac{\pi}{2}$ und $\frac{\pi}{2}$\begin{align}
+E_y &= \int\limits_{-\tfrac{\pi}{2}}^{\frac{\pi}{2}} \frac{1}{4\pi \epsilon_{0}} \frac{\lambda \cos \alpha}{a} d\alpha \\
+E_y &=\frac{\lambda}{2\pi \epsilon_0}\frac{1}{a}
+\end{align}
+Exakt diese Vorgehensweise lässt sich für jedes hochsymmetrische  elektrische Feld anwenden, so erhält man für einen unendlich ausgedehnten Plattenkondenstaor\begin{align}
+E_y = \frac{\sigma}{2\epsilon_0}
+\end{align}
+\subsection{Der elektrische Fluss - Gauß'scher Satz} \label{sec:elFluss}
+Die Idee des elektrischen Fluss erfolgt als Erweiterung des anschaulichen Flussbegriffs aus der Hydrodynamik. Nehmen wir an, dass es endlich viele Feldlinien gäbe, so ordnen wir jeden Feldlinie eine Art Röhre/Schlauch zu. Die gerade so dick ist, dass sich benachbarte gerade nicht berühren können. Man kann sich das folgende Bild sehr schön vorstellen, wenn man es mit dem Wasserfluss vergleicht. Das Medium (elektrisches Feld)  fliest im Röhrengebilde  \textbf{von Quellen hin zu Senken} und wird dann \textbf{elektrischer Fluss} genannt.\\ Das Flüssigkeitsvolumen welches in einer Zeitspanne einen gewissen Querschnitt durchfließt ist demnach der Fluss. Eine alternative Beschreibung ist das Produkt aus der Fließgeschwindigkeit und der durchstrichenen Fläche.\begin{align}
+\Psi = AE
+\end{align}Diese Definition sind zugegeben sehr umgangssprachlich, erleichtern aber den nächsten Schritt hin zur physikalischen quantitativen Beschreibung. \par 
+Steht das elektrische Feld unter einem Winkel $\alpha$ zur Flächennormale der durchströmten Fläche, so ist der äquivalente Teil gegeben durch das Produkt aus Fläche und Feld mal des eingeschlossenen Winkels\begin{align}
+\Psi = AE\cos \alpha
+\end{align}und erinnert uns stark an das Skalarprodukt zweier vektoriellen Größen. Tatsächlich ergibt sich dieser Zusammenhang als\begin{align}
+\Psi = \vec{A} \cdot \vec{E}
+\end{align} Wenn sich jedoch entlang der Fläche das elektrische Feld ändert (es z.B. keine Punktladungscharakteristik hat), so verunglückt unsere Definition sofort,können sie retten  jedoch erweitern indem wir über die einzelnen Flächenstücke $d\vec{A}$ integrieren.\begin{align}
+\boxed{\Psi = \oint \vec{E} \cdot d\vec{A} = \frac{Q}{\epsilon_0}} \label{eqn:elFluss}
+\end{align}
+
+\begin{figure}
+\begin{center}\includegraphics[scale=0.6]{img/elektrischerFluss}\end{center}
+\caption{Steht das überall konstante E-Feld senkrecht auf der Fläche, so gilt \mbox{$\Psi = AE$}. Steht E(const!) schräg zur Fläche so wirkt nur $\Psi = AE\cos \alpha$. Der allgemeine Fall trifft immer zu, so integrieren wir mit (\ref{eqn:elFluss}). \textit{Abb. S.318 Gerthsen} }
+\label{pic:elFluss}
+\end{figure}
+ \paragraph{Beispiel: elektrischer Fluss einer Punktladung Q.} Hierfür überlegen wir uns zunächst die spezifischen Eigenschaften der umgebenden Sphäre. Die Ladungsverteilung einer Punktladung ist radialsymmetrisch, demnach in Abhängigkeit vom Abstand zum Zentrum schon bestimmt.\begin{align*}
+\Psi = \int \limits_{\mathrm{Kugel}} \vec{E} \cdot d\vec{A}
+\end{align*}Für das elektrische Feld benutzen wir (\ref{eqn:elFeldstärke}) und erhalten nach einsetzen und ausklammern der Konstanten\begin{align*}
+\Psi 	&= \frac{Q}{4\pi\epsilon_0}\int \limits_{\mathrm{Kugel}} \frac{1}{r^2}\hat{r} \cdot \underbrace{d\vec{A}}_{\Rightarrow 4\pi r^2}\\
+		&= \frac{Q}{\epsilon_0} \label{eqn:elFluss_Punktladung}
+\end{align*}Wir erkennen schnell, dass sich die unschönen Konstanten gegenseitig aufheben. Geschichtlich betrachtet ist genau dies der Grund, warum man den Vorfaktor $\tfrac{1}{4\pi\epsilon_0}$ so gewählt hat. Im alten cgs-system kamen die Coulomb-Gesetze übrigens ohne diese "`unvorteilhaften"' aus, die Kehrseite der  Medaille war die schwierige Integration.
+
+\paragraph{Rekursive Berechnung der Feldstärke:} Nehmen wir an, wir kennen den Fluss eines Felds und sollen Aussagen über die Topologie und das Verhalten des elektrischen Felds machen, so helfen unsere anfänglichen Überlegungen zur Symmetrie enorm. Nehmen wir an, wir kennen $\Psi = \frac{Q}{\epsilon_0}$ und legen um diese Punktladung (wir nehmen zumindest an, dass es sich um solch eine handelt) irgendeine Hüllfäche. Idealisieren diese allerdings gleich zu einer Kugel, das erspart uns eine Menge Rechnerei die sehr komplex werden müsste. \\Die Oberfläche solch einer Kugelsphäre kennen wir mit $4\pi r^2$ und hoffen, dass der Fluss gleichmäßig über die Kugelfläche verteilt auftreten wird. So haben wir für $\Psi$ zwei Angaben.\begin{align*}
+\frac{Q}{\epsilon_0} = 4\pi r^2 E
+\end{align*}Der Vergleich mit \ref{eqn:elFluss} zeigt uns für die Auflösung nach E\begin{align}
+E = \frac{Q}{4\pi \epsilon_0 r^2}
+\end{align}Das ist genau die Definition des Betrags des elektrischen Felds einer Punktladung, wie wir es gewohnt sind.
+\subsection{Elektrostatisches Potential} Wenn wir uns an die Mechanik des 1. Semesters erinnern, so fällt im Zusammenhang mit der Potentiellen Energie der Begriff des konservativen Kraftfelds. Dabei stellten wir fest, dass es gerade unwichtig ist welchen Weg wir von Punkt 1 nach 2 wählen. Gleiches gilt auch für das statische elektrische Feld. Die Arbeit W die verrichtet werden muss um die Probeladung Q hin zu einem anderen Punkt im Kraftfeld zu transportieren ist unabhängig vom gewählten Weg. Das elektrische Kraftfeld ist also ein \textbf{konservatives Kraftfeld}. \\ Bewegen wir die Ladung im Feld relativ langsam (in der Größenordnung von 5\%Vakuum-Lichtgeschwindigkeit) so entspricht die Arbeit, die wir aufbringen müssen gerade dem negative Produkt aus $q \vec{E}$ und der Weglänge\begin{align}
+dW = \vec{F} \cdot d\vec{s} = - q \vec{E} d\vec{s} \label{eqn:defElArbeit}
+\end{align}
+So ergibt sich für die Arbeit zwischen zwei Punkten $p_1 \; p_2$\begin{align}
+\boxed{ W_{12}	= -q\int \limits_{p_1}^{p_2} \vec{ E} \cdot d\vec{s} }\label{eqn:elArbeit} \end{align}
+
+\begin{align}
+0 		= q \oint  \vec{E} \cdot d\vec{s} \Rightarrow \mathrm{konservativ!}
+\end{align} Dividiert man die Änderugn der potentiellen Energie durch den Betrag der bewegten Probeladung, erhält man einen Zusammenhang zwischen geleisteter Arbeit von $p_1$ und $p_2$ die wir \textbf{Potentialdifferenz} bzw. häufig auch als \textbf{Spannung} bezeichnen
+
+\subsubsection{Die Spannung}
+\begin{align} \label{eqn:defSpannung}
+\boxed{U = \frac{W}{q} = \phi\left( p_2\right) - \phi\left( p_1\right) = - \int \limits_{p_1}^{p_2} \vec{ E} \cdot d\vec{s} }
+\end{align}Diese Form erscheint auf den ersten etwas ungewohnt, dabei kennen wir sie aus der Schule im Zusammenhang mit Plattenkondensatoren. Die Linearität des Abstands d zweier Platten lässt ein schnelles lösen des Integrals zu:\begin{align*}
+E = \frac{U}{d}
+\end{align*}
+\paragraph*{Beachte:}Von einer Spannung zu sprechen ist relativ sinnfrei, nur durch den Bezug zu einem Punkt im elektrischen Feld kann man von Spannungen sprechen. Besser ist es von einer \textbf{Spannung zwischen zwei Punkten}  zu Sprechen, dies ergibt sich unmittelbar aus der Definition (\ref{eqn:defSpannung})
+
+
+Soweit zur Arbeit, die auf keinen Fall mit dem Potential verglichen werden darf. \\ Jedem Punkt im elektrischen Feld ordnen wir eine bestimmte Eigenschaft zu, in diesem Fall ein Potentialwert. Wie bei der potentiellen Energie im Schwerefeld der Erde liegt es in unserer Hand den Nullpunkt frei zu bestimmen, es hat sich jedoch als vorteilhaft erwiesen den "`unendlichen Punkt"' als Normierung zu benutzen. So ergibt sich das \textbf{Elektrostatische Potential} als die Aufsummierung der Wegstücke zwischen dem Punkt $p$ hin zum Nullpunkt.\begin{align}
+\boxed{\phi \left( p\right) = \int \limits_p^\infty \vec{E} \cdot d\vec{s}} \label{eqn:elPotential}
+\end{align}
+\paragraph*{Beispiel: Potential im elektrischen Feld einer Punktladung.} Das E-Feld einer Punktladung ergibt sich natürlich als $\vec{E} = \frac{q}{4\pi\epsilon_0} \frac{\hat{r}}{r}$. Potential für E-Felder ergeben sich durch (\ref{eqn:elPotential}). Wir wollen explizit das Potential zwischen p und dem Nullpunkt bestimmen. Da man leider nicht den genauen Weg kennt, wie sich das Teilchen nun ins unendliche bewegen wird, stellt man sich vereinfacht vor, dass wir uns mit dem Teilchen entlang einer Feldlinie R bewegen.\begin{align*}
+\phi \left( p\right) 	&= \frac{q}{4\pi\epsilon_0} \int \limits_R^\infty \frac{1}{r^2} dr \\
+						&= \frac{q}{4\pi\epsilon_0} \frac{1}{r}\bigg|_R^\infty \\
+						&= \frac{q}{4\pi\epsilon_0 R} 
+\end{align*} Solch ein Potential hat demnach die Proportionalität von $1/r$ (Abb. \ref{pic:Potential Punktladung})
+\begin{figure}[htp]\begin{center}
+\includegraphics[scale=0.5]{img/elPotential_Punktladung}\end{center}
+\caption{Potential einer Punktladung. Orte gleicher Potentiale werden schwarz dargestellt als Äquipotentialflächen. Zum Vergleich die Feldlinien blau markiert. \textit{Abb. S. 320 Gerthsen}}
+\label{pic:Potential Punktladung}
+\end{figure}
+\subsubsection{Poissongleichung}\begin{align}\label{eqn:Poissongleichung}
+\Fdiv \grad \varphi = \boxed{\Delta \varphi = -\frac{\varrho}{\epsilon_0}}
+\end{align}
+\subsection{Kondensator}Ein Kondensator ist ein Ladungsspeicher für elektrische Ladungen. Durch externe Aufladung kann sich ein Potential aufbauen, welches wir Spannung nennen. Diese Spannung ergibt mit  Plattenabstand d und einer homogenen Ladung beingt durch (\ref{eqn:elFluss})\begin{align}
+E = \frac{U}{d}
+\end{align}Die Spannung ist ein Maß für die gespeicherte Ladung C. Da $U \propto Q$ gilt, findet man die Proportionalitätskonstante \textbf{C} als die\textbf{ Kapazität des Kondensators}.
+\subsubsection{Kapazität}
