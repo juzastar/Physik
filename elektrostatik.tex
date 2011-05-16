@@ -143,16 +143,22 @@ E = \frac{U}{d}
 \end{align}Die Spannung ist ein Maß für die gespeicherte Ladung C. Da $U \propto Q$ gilt, findet man die Proportionalitätskonstante \textbf{C} als die \textbf{Kapazität des Kondensators}.
 
 \subsubsection{Kapazität eines Plattenkondensators}
-Für einen metallischen Kugelkondensator (manchmal auch als Kugelkonduktor bezeichnet) mit dem Radius R ergibt sich durch das Potential $\phi \left(R\right)$(\ref{eqn:elPotential}), und anschließendem Umformen nach der gespeicherten Ladungsmenge: $Q = 4\pi \epsilon_0 R \cdot U$. Wobei wir hier für die Spannung U das Nullpotential  mit $r = \infty$ entsprechend der üblichen Konvention gewählt haben (Wir schreiben also die Potentialdifferenz nicht explizit auf, sollten sie aber trotzdem erwähnen). Die beschriebene Poportionalitätskonstante ist hierbei $C_{Kugel} = 4\pi \epsilon_0 R$. 
-\begin{align} \label{eqn:Kapazität Plattenkondensator}
-\boxed{C = \frac{Q}{U} = \epsilon_0 \frac{A}{d}}
+Für einen metallischen Kugelkondensator (manchmal auch als Kugelkonduktor bezeichnet) mit dem Radius R ergibt sich durch das Potential $\phi \left(R\right)$(\ref{eqn:elPotential}), und anschließendem Umformen nach der gespeicherten Ladungsmenge: $Q = 4\pi \epsilon_0 R \cdot U$. Wobei wir hier für die Spannung U das Nullpotential  mit $r = \infty$ entsprechend der üblichen Konvention gewählt haben (Wir schreiben also die Potentialdifferenz nicht explizit auf, sollten sie aber trotzdem erwähnen).
+Die beschriebene Poportionalitätskonstante ist hierbei $C_{Kugel} = 4\pi \epsilon_0 R$. \par
+Für eine weitere Abstrahierung kann man den kapazitiven Ausdruck betrachten. $4\pi R$ ist gerade die Oberfläche A der Kugel dividiert durch den entsprechenden Radius der Kugel. Schreiben wir also $\tfrac{Q}{U} = \epsilon_0 \frac{A}{R} $\begin{align} \label{eqn:Kapazität Plattenkondensator}
+\boxed{C = \frac{Q}{U} = \epsilon_0 \frac{A}{R}}
 \end{align}
+Die Einheit der Kapazität ist zu Ehren Faradays durch den Namenszusatz "`\textbf{Farad} "' bezeichnet.\begin{align*}
+\left[ C\right] = 1 \frac{As}{V} = 1 \, F
+\end{align*}
 
-Für einen Kugelkondensator ergibt sich die Kapazität zu
-\begin{align} \label{eqn:Kapazität Plattenkondensator}
-C= 4 \pi \epsilon_0 R
-\end{align}
-
+Hinweis: Um Kapazitäten von Symmetrischen Objekten zu berechnen kann immer der Umweg über das Potential benutzt werden. Vorraussetzung ist natürlich, dass man das jeweilige spezifische E-Feld kennt. Hier einige \textbf{Beispiele für Kapazitäten} von Kugelschalenkondensator, Zylinderkondensator und Plattenkondensator
+\begin{align*}
+C_{KS} 		&= 4\pi \epsilon_0 \frac{r_1 r_2}{r_2 - r_1} \\
+C_{Zyl} 	&= \frac{2\pi \epsilon_0 h}{\ln  \left(r_2 / r_1\right) }\\
+C_{Platt} 	&= \epsilon_0 \frac{A}{d}
+\end{align*}
+Beachte: Die letzte Formel wurde schon im Beispiel (\ref{eqn:Kapazität Plattenkondensator}) behandelt. Sie ist auch für alle anderen Körper gültig, so lange der Abstand d hinreichend klein ist.
 
 \paragraph{Parallelschaltung von Kondensatoren}
 \begin{align} \label{eqn:gesKapazität Parallelschaltung}
