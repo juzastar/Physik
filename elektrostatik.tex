@@ -143,7 +143,7 @@ E = \frac{U}{d}
 \end{align}Die Spannung ist ein Maß für die gespeicherte Ladung C. Da $U \propto Q$ gilt, findet man die Proportionalitätskonstante \textbf{C} als die \textbf{Kapazität des Kondensators}.
 
 \subsubsection{Kapazität eines Plattenkondensators}
-Für einen metallischen Kugelkondensator (manchmal auch als Kugelkonduktor bezeichnet) mit dem Radius R ergibt sich durch das Potential $\phi \left(R\right)$(\ref{eqn:elPotential}), und anschließendem Umformen nach der gespeicherten Ladungsmenge: $Q = 4\pi \epsilon_0 R \cdot U$. Wobei wir hier für die Spannung U das Nullpotential  mit $r = \infty$ entsprechend der üblichen Konvention gewählt haben (Wir schreiben also die Potentialdifferenz nicht explizit auf, sollten sie aber trotzdem erwähnen).
+Für einen metallischen Kugelkondensator (manchmal auch als Kugelkonduktor bezeichnet, wenn sich die äußere Gauß-Schale im Unendlichen befindet) \footnote{Einfacher ist es jedoch zunächst den Begriff des Kugelkondensators zu benutzen und zwischen Schalenkugelkondensatoren zu unterschieden} mit dem Radius R ergibt sich durch das Potential $\phi \left(R\right)$(\ref{eqn:elPotential}), und anschließendem Umformen nach der gespeicherten Ladungsmenge: $Q = 4\pi \epsilon_0 R \cdot U$. Wobei wir hier für die Spannung U das Nullpotential  mit $r = \infty$ entsprechend der üblichen Konvention gewählt haben (Wir schreiben also die Potentialdifferenz nicht explizit auf, sollten sie aber trotzdem erwähnen).
 Die beschriebene Poportionalitätskonstante ist hierbei $C_{Kugel} = 4\pi \epsilon_0 R$. \par
 Für eine weitere Abstrahierung kann man den kapazitiven Ausdruck betrachten. $4\pi R$ ist gerade die Oberfläche A der Kugel dividiert durch den entsprechenden Radius der Kugel. Schreiben wir also $\tfrac{Q}{U} = \epsilon_0 \frac{A}{R} $\begin{align} \label{eqn:Kapazität Plattenkondensator}
 \boxed{C = \frac{Q}{U} = \epsilon_0 \frac{A}{R}}
@@ -152,13 +152,14 @@ Die Einheit der Kapazität ist zu Ehren Faradays durch den Namenszusatz "`\textb
 \left[ C\right] = 1 \frac{As}{V} = 1 \, F
 \end{align*}
 
-Hinweis: Um Kapazitäten von Symmetrischen Objekten zu berechnen kann immer der Umweg über das Potential benutzt werden. Vorraussetzung ist natürlich, dass man das jeweilige spezifische E-Feld kennt. Hier einige \textbf{Beispiele für Kapazitäten} von Kugelschalenkondensator, Zylinderkondensator und Plattenkondensator
+Hinweis: Um Kapazitäten von Symmetrischen Objekten zu berechnen kann immer der Umweg über das Potential benutzt werden. Voraussetzung ist natürlich, dass man das jeweilige spezifische E-Feld kennt. Hier einige \textbf{Beispiele für Kapazitäten} von Kugelschalenkondensator, Zylinderkondensator,Plattenkondensator sowie Paralleldraht
 \begin{align*}
 C_{KS} 		&= 4\pi \epsilon_0 \frac{r_1 r_2}{r_2 - r_1} \\
 C_{Zyl} 	&= \frac{2\pi \epsilon_0 h}{\ln  \left(r_2 / r_1\right) }\\
-C_{Platt} 	&= \epsilon_0 \frac{A}{d}
+C_{Platt} 	&= \epsilon_0 \frac{A}{d}\\
+C_{ParaDraht} &=  \frac{\pi \epsilon_0}{\ln\left( d/r\right)}
 \end{align*}
-Beachte: Die letzte Formel wurde schon im Beispiel (\ref{eqn:Kapazität Plattenkondensator}) behandelt. Sie ist auch für alle anderen Körper gültig, so lange der Abstand d hinreichend klein ist.
+Beachte: Die vorletzte Formel wurde schon im Beispiel (\ref{eqn:Kapazität Plattenkondensator}) behandelt. Sie ist auch für alle anderen Körper gültig, so lange der Abstand d hinreichend klein ist.
 
 \paragraph{Parallelschaltung von Kondensatoren}
 \begin{align} \label{eqn:gesKapazität Parallelschaltung}
@@ -171,20 +172,60 @@ Beachte: Die letzte Formel wurde schon im Beispiel (\ref{eqn:Kapazität Plattenk
 \end{align}
 
 \subsection{Energie im elektrischen Feld}
+Stellen wir uns einen geladenen Plattenkondensator vor, dem wir eine kleine Ladung $dQ$ hinzufügen möchten. Im Fall, dass der Kondensator schon vorgeladen ist, existiert ein E-Feld. Gegen gerade dieses E-Feld muss Arbeit verrichtet werden (Der Millikan-Versuch macht sich diese Kraftwirkung zu nutze und erzeugt wunderbare Schwebeffekte). Es  gilt für die Kraftwirkung 
+
+\begin{align*}
+d\vec{F} = \vec{E} \cdot dQ
+\end{align*}
+Für die Arbeit gilt nach der klassischen Mechanik $ W = \int \vec{F} \cdot d\vec{r}$. Setzen wir also dies um \begin{align*}
+dW = - dQ \int \limits_0^d  \vec{E} \cdot d\vec{s}
+\end{align*} Der Teil nach $dQ$ entspricht gerade dem Potential zwischen Anfangs und Endpunkt (\ref{eqn:defSpannung})\begin{align*}
+dW = dQ \cdot U
+\end{align*}Bisher haben wir lediglich gezeigt wie sich die Arbeit für den kleinst möglichen Ladungsteil verhält. Um jedoch die Energie zu bestimmen, die in einem aufgeladenen Kondensator steckt, betrachten wir jetzt alle Ladungsträger die wir hin zu anderen Platte bewegen möchten. Die Integration liefert uns \begin{align*}
+W 	&= \int \limits_0^Q \frac{Q}{C}\,dQ = \frac{1}{2}\frac{1}{C}Q^2 
+\end{align*}Im alltäglichen Gebruach hat es sich als praktisch erwiesen i
+sich je nach Gegebenheit $\frac{Q^2}{C} $ durch $Q = C\cdot U$ entsprechend abzuändern. \par
+Ist die Ladungsverschiebung abgeschlossen, so ist die gesamte geleistete Arbeit übergegangen in eine Form, die wir \textbf{potentielle Energie} des Kondensators nennen.
 \begin{align} \label{eqn:elektrische Energie}
-\boxed{E_{pot} = \tfrac{1}{2} C U^2 = \tfrac{1}{2}qU}
+\boxed{E_{pot} = \tfrac{1}{2} C U^2 = \tfrac{1}{2}QU}
 \end{align}
+
+
 \subsubsection{Energiedichte von elektrischen Feldern}
+Nachdem wir den Kondensator erfolgreich aufladen konnten und ihm eine charakteristische Energie zuordnen konnten darf die Frage erlaubt sein wo sich denn diese Energie nun befindet. \\ Da sie weder außen an den Platten noch in selbiger zu finden sind, liegt es nahe, dass die \textbf{Energie im inneren des Kondensators} beheimatet sein sollte. durch die Aufladung des Kondensators erzeugen wir ein E-Feld, wir vermuten daher, dass genau hier die Energie gespeichert wird. \par 
+Äquivalent zur Dichte bei Massen berechnet sich die Energiedichte aus  dem Quotienten der gespeicherten \textbf{Energie pro Volumen}.\begin{align*}
+w = \frac{E_{pot}}{V}
+\end{align*} Für den speziellen Fall eines \textbf{Plattenkondensators} ergibt sich weiter mit $V = A \cdot d$ ( wobei $d$ den Abstand beider Platten zueinander beschreibt) und der Kapazität $C = \epsilon_0 \frac{A}{d}$ Sowie der Feldstärle $E = \frac{U}{d}$
+\begin{align*}
+w = \frac{\tfrac{1}{2} C \cdot U^2}{a \cdot d} = \frac{\epsilon_0 \cdot A \cdot E^2 \cdot d^2}{2 \cdot A \cdot d^2 }
+\end{align*}
+
+Weitere Beispielrechnungen  würden zeigen, dass für jede Art von elektrischen Feldern die \textbf{elektrische Energiedichte} stets gegeben ist durch
 \begin{align} \label{eqn:Energiedichte}
-\boxed{w = \frac{1}{2} \epsilon_0 |\vec{E}|}
+\boxed{w = \tfrac{1}{2} \epsilon_0 |\vec{E}|^2}
 \end{align}
+
 
 \subsection{Dielektrika}
-\begin{align} \label{eqn:Dielektrikum Plattenkondensator}
-C_{Diel} = \epsilon C_{Vak} = \epsilon \cdot \epsilon_0 \frac{A}{d}
-\end{align}
-Vergleich: Influenz bei Leitern
 
+Zugegeben sind Dielektrika recht seltsame Objekte,auf eine explizite Herleitung soll daher verzichtet werden (ein paar wichtige Beziehungen habe ich dennoch beigefügt). Wichtiger ist es die Phänomene die so ein besonderer Isolator erzeugt  zu verstehen und deuten zu können. 
+Nehmen wir uns einen geladenen Plattenkondenstor, in selbigen schieben wir ein Dielektrikum, der primär als Isolator wirkt.
+In diesem Isolator selbst sind eine große Menge neuer Ladungsträger enthalten, die sich entsprechend dem Dipolmoment genau entgegen der Polarisierung des Plattenkondensators ausrichten (wie die Kompassnadel im Magnetfeld der Erde).
+Für die Kapazität des Ladungsträgers ergibt sich jetzt eine \textbf{wesentlich höhere Kapazität}, da wir sehr viel mehr Ladungsträger polarisieren können.
+Diese Ladungserhöhung ist je nach gewählten Stoff sehr unterschiedlich.
+Diese Materialkonstante fließt direkt in die Berechnung der Kapazität ein. So ergibt sich jetzt wür einen Plattenkondensator mit \textbf{Dielektrizitätszahl} $\epsilon_r$
+\begin{align}\label{eqn:Dielektrikum Plattenkondensator}
+C = \underbrace{\epsilon_0 \epsilon_r}_{\epsilon} \frac{A}{d}
+\end{align}
+
+Diese spezifische Eigenschaft der Dielektrika nutzt man in der technischen Anwendung für verschiedenste Bereiche. Drei wichtige Anwendungen sind\begin{enumerate}
+\item \textbf{Geringe Schichtabstände} lassen sich so realisieren, \textbf{ohne die Gefahr von Kurzschlüssen}.
+\item Luft besitzt im allgemeinen lediglich eine \textbf{Spannungsfestigkeit} von $\approx 3\mathrm{\tfrac{kV}{mm}}$, hingegen ein Dielektrium sogar $\approx 60\mathrm{\tfrac{kV}{mm}}$ erreichen kann. So kann  sehr hohe Energiedichten erreichen, bei gleichbleibend kleinen Ausmaßen.
+\item  Durch die \textbf{höhere Kapazität} können kleinere Kondensatoren gebaut werden, die zudem in der Produktion günstiger geraten. 
+\end{enumerate} \par
+
+\textit{\quote  "` Warum kamen wir bisher ohne Dielektrika aus ?"'}
+Diese FRage ist leicht zu beantworten. Denn das Dielektrikum, welches wir für unsere benutzt haben (ohne es genauer gewusst zu haben) ist das Medium Luft. Der glückliche Zufall ist jedoch, dass dessen Materialkonstante $\epsilon_r$ gerade ungefähr durch 1  
 \subsubsection{Dielektrische Polarisation}
 \begin{align} \label{eqn:Polarisation}
 \vec{p} = q \vec{d}
