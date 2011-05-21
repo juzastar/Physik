@@ -1,22 +1,62 @@
 \section{Der elektrische Strom}
+In der Elektrostatik beschäftigten wir uns zunächst mit statisch ruhenden Teilchen. Die besondere Eigenschaft war hier gerade, dass längs eines Leiters keine Potentialdifferenz auftrat.
+\par Jede Bewegung von elektrischen Ladungen bezeichnen wir als einen \textbf{elektrischen Strom}, dieser ist definiert durch die Bewegung positiver Ladungsträger.
+Wie kommt es jedoch zu diesem \textbf{Teilchentransport}, der die Quelle jeder Teilchen sein sollte? In den meisten Fällen handelt es sich hier um externe Spannungsquellen, welche je nach Polung einen Elektronenmangel bzw. Elektronenüberschuss erzeugen können.
+Diese Elektromotorische Kraft (EMK) hält die Bewegung der Teilchen aufrecht. Ohne diese externe \textbf{Potentialdifferenz }fließen die Elektronen nach einiger Zeit nicht mehr und ruhen. Genau dann befinden wir uns im elektrostatischen Zustand.
+
 \subsection{Stromstärke und Stromtransport}
 
 \paragraph{Elektrischer Strom}
+Ein elektrischer Strom beschreibt die Anzahl an Ladungen $dQ$ , die pro Zeitintervall $dt$ einen Leiterquerschnitt durchfließen. Allgemein ergibt sich
 \begin{align} \label{def:Strom}
 \boxed{I := \frac{dQ}{dt}}
 \end{align}
+Die Einheit der Stromstärke ist festgelegt durch $1\mathrm{A(mpere)}$. Ampere ist eine Basisgröße im SI-System lässt sich folglich nicht durch andere Größen darstellen. 
 
-\paragraph{Stromdichte}
-
-\begin{align} 
-I = \int \limits_A \vec{j} \cdot d\vec{A}
+Für Gleichströme können wir uns überlegen, dass die Ladungsmenge endlich gegeben ist
+ mit $Q = n\cdot q$t (Ladung kann schließlich nur in Quanten auftreten). Es folgte für das Zeitintervall $T$ 
+ \begin{align} \label{eqn:elektrischer Strom Gleichspannung}
+I_{gl} = \frac{n\cdot q}{T}
 \end{align}
 
+\subsection{Kirchhoffsche Regeln}
+Netzwerke von Schaltungen können unterschiedlich aufgebaut sein. Man unterscheidet zwischen so genannten Knoten- und Maschentopologien. 
+\subsubsection{Knotenregeln}
+In Knoten kann keine Ladung gespeichert werden, so sollte die \textbf{Summe der zufließenden Ströme den abfließenden }entsprechen. 
+\begin{align} \label{eqn:Knotenregel}
+\boxed{\sum \limits_{k=1}^n I_k = 0}
+\end{align}
 
+\subsubsection{Maschenregel}
+Ein zweiter möglicher Aufbau ist eine Masche. Umläuft man einmal eine gesamte Masche, so muss die \textbf{Summe aller Potentialdifferenzen null} ergeben. Hierbei ist es unabhängig, wie der Umlaufsinn festgelegt wurde.
+Die Wichtung von Klemmspannung und den Spannungsabfällen an Widerständen (etc.) erfolgt anti-parallel, also mit unterschiedlichem Vorzeichen. Die Kirchhoffschen Regeln kann man sich bildlich als Vektoraddition hin zum Nullvektor vorstellen.
+
+\begin{align} \label{eqn:Maschenregel}
+\boxed{\sum \limits_{k=1}^n U_k = 0}
+\end{align}
+
+\subsection{Stromdichte}
+Stromdichte $\vec{j}$ ist eine vektorielle Größe und beschreibt den Ladungstransport durch einen Leiter mit einem bestimmten Querschnitt A. Für gutartige Leiter gilt demnach
+ \begin{align*}
+j = \frac{I}{A}
+\end{align*}
+Besser ist jedoch die vektorielle Aufsummierung über die Flächennormalen von Querschnittsflächen. 
+\begin{align} 
+\boxed{I = \int \limits_A \vec{j} \cdot d\vec{A}}
+\end{align}
+Hauptträger der elektrischen Ladung in el. Leitern sind vorwiegend Elektronen, weitere Vertreter sind Ionen die z.B: Ladungsaustausch in Ionengittern (Elektrolyten etc.) ermöglichen. In Plasmen treten nicht nur spannende Effekte wie z.B. die Polarlichter auf, hier werden zugleich Ionen und Elektronen für den Austausch von Ladungen benötigt.
+
+% Diese Def. ist nicht mehr zeitgemäß!
 \begin{align} \label{eqn:Stromdichte}\begin{split}
 \vec{j} &= nq\vec{v} \\
-\vec{j}	&= \varrho_{el}\vec{v}\end{split}
-\end{align}Mit der Ladungsdichte geschrieben als $\varrho_{el} = nq$.
+\vec{j}	&= \varrho_{el}\vec{v}
+\end{split}
+\end{align}
+Mit der Ladungsdichte geschrieben als $\varrho_{el} = nq$ (bemerke: Die Ladungsdichte nicht mit Dichten von Massenverteilungen bzw. dem elektrischen Widerstand verwechseln!)
+
+
+
+\end{align*}
 
 \begin{align} \label{eqn:}
 •

@@ -2,7 +2,8 @@
 \documentclass[%
 	pdftex,%              PDFTex verwenden da wir ausschliesslich ein PDF erzeugen.
 	a4paper,%             Wir verwenden A4 Papier.
-	oneside,%             Einseitiger Druck.
+	%oneside,%             Einseitiger Druck.
+	twoside,%
 	12pt,              %  Grosse Schrift, besser geeignet f�r A4.
 	halfparskip,%         Halbe Zeile Abstand zwischen Abs�tzen.	
 	%chapterprefix,%       Kapitel mit 'Kapitel' anschreiben.
@@ -41,36 +42,48 @@
 \usepackage{ae}
 
 \usepackage{setspace}
-\usepackage[left=25mm,right=25mm,top=28mm,bottom=25mm,headheight=21pt,headsep=27pt,footskip=30pt]{geometry}
+%\usepackage[left=25mm,right=25mm,top=28mm,bottom=25mm,headheight=21pt,headsep=27pt,footskip=30pt]{geometry}
+\usepackage[top=35mm,bottom=25mm,headheight=21pt,headsep=27pt,footskip=30pt]{geometry}
 \usepackage{blindtext}
 
 
 \usepackage{graphicx}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%  Font
+\setlength{\parskip}{1cm plus0.5cm minus0.5cm}
+
+
+
+
+
+
+
 
 %Packet für anklickbare Links
 \usepackage{hyperref}
 
 \usepackage[scaled=.85]{luximono}
 
-%\pagestyle{headings}
+\pagestyle{headings}
 
 %
 %  4. Stil der Überschriften auf normale Schrift.
 %     Wir verwenden für die Überschriften den selben Font wie für den Text.
 %
 %\setkomafont{chapter}{\Huge}
-\setkomafont{section}{\normalfont\bfseries\LARGE}
-\setkomafont{title}{\normalfont\Large\bfseries\Large}
-\setkomafont{subsection}{\normalfont\bfseries\large}
-\setkomafont{subsubsection}{\normalfont\bfseries}
+%\setkomafont{section}{\normalfont\bfseries\LARGE}
+%\setkomafont{title}{\normalfont\Large\bfseries\Large}
+%\setkomafont{subsection}{\normalfont\bfseries\large}
+%\setkomafont{subsubsection}{\normalfont\bfseries}
 			
 
 
 
-\setkomafont{sectioning}{\normalfont\bfseries}       % Titel mit Normalschrift
-\setkomafont{captionlabel}{\normalfont\bfseries}     % Fette Beschriftungen 
-\setkomafont{pagehead}{\normalfont\itshape}          % Kursive Seitentitel
-\setkomafont{descriptionlabel}{\normalfont\bfseries} % Fette Beschreibungstitel
+%\setkomafont{sectioning}{\normalfont\bfseries}       % Titel mit Normalschrift
+%\setkomafont{captionlabel}{\normalfont\bfseries}     % Fette Beschriftungen 
+%\setkomafont{pagehead}{\normalfont\itshape}          % Kursive Seitentitel
+%\setkomafont{descriptionlabel}{\normalfont\bfseries} % Fette Beschreibungstitel
 
 
 %#uhrzeit
@@ -86,13 +99,13 @@
 %Linie oben
 %\renewcommand{\headrulewidth}{0.5pt}
  
-%Fußzeile links bzw. innen
-\fancyfoot[L]{Erstellt durch Florian Diekmann}
-%Fußzeile mittig (Seitennummer)
-\fancyfoot[C]{\thepage}
-%Linie unten
-\renewcommand{\footrulewidth}{0.5pt}
- 
+%%Fußzeile links bzw. innen
+%\fancyfoot[L]{Erstellt durch Florian Diekmann}
+%%Fußzeile mittig (Seitennummer)
+%\fancyfoot[C]{\thepage}
+%%Linie unten
+%\renewcommand{\footrulewidth}{0.5pt}
+% 
 % Fußzeile auf jeder Seite - auch Kapitel und Inhaltsverzeichnis
 %\fancypagestyle{plain}{%
 %   \fancyhf{}%
