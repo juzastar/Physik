@@ -54,10 +54,44 @@ Hauptträger der elektrischen Ladung in el. Leitern sind vorwiegend Elektronen, 
 \end{align}
 Mit der Ladungsdichte geschrieben als $\varrho_{el} = nq$ (bemerke: Die Ladungsdichte nicht mit Dichten von Massenverteilungen bzw. dem elektrischen Widerstand verwechseln!)
 
+\subsection{Ohmsche Widerstände}
+Durchlaufen Elektronen einen ohmschen Leiter, so finden fortlaufend Stoßprozesse statt, die zur Verlangsamung selbiger führen. Gitterschwingungen im Leiter selber sind die überwiegenden Effekte, die zu Reibungseffekten führen können.
 
+\subsubsection{Ohmsches Gesetz}
+Viele dürften mit dem Begriff des Ohmschen Gesetzes die Gleichung $U = R\cdot I$ verbinden. Leider ist dies ein großer Irrtum, dass Ohmsche Gesetz beschreibt die Proportionalität von homogenen ohmschen Widerständen zur Leiterlänge und die Proportionalität zum Kehrwert des Leiterquerschnitts.
+\begin{align} \label{eqn:Ohmsches Gesetz}
+\boxed{R = \varrho_{el} \frac{l}{A}}
+\end{align}Wobei $\varrho_{el}$ den spezifischen Widerstand beschreibt ($\frac{1}{\varrho_{el}} =  \sigma$) Die Einheit von ohmschen Widerständen wir angegeben in $1 \Omega$ (Ohm)
 
-\end{align*}
-
-\begin{align} \label{eqn:}
-•
+\subsubsection{Def. d. Widerstands}
+Die leicht zu merkende Gleichung U-RI entspricht in ihrer ursprünglichen Form\begin{align} \label{eqn:Definition d. Widerstands}
+I 			&= \frac{1}{R}U = G\cdot U
+\end{align}\begin{align} \label{eqn:URI}
+\boxed{U = R \cdot I}
 \end{align}
+G steht hier für den Leitwert
+
+\subsection{Einfache Netzwerke von Widerständen}
+\subsubsection{Reihenschaltung}
+Für Reihenschaltungen von ohmschen Widerständen ergibt sich, dass die jeweiligen Stromstärken überall gleich sind, die Spannungsabfälle über einen Widerstand jedoch von der eigenen Mächtigkeit abhängt. Nach der Maschenregel als Summe über die einzelnen Teilspannungen ergibt sich
+\begin{align} \label{eqn:Gesamtwiderstand Reihenschaltung}
+\boxed{R_{ges} = \frac{U}{I} = \sum\limits_i R_i}
+\end{align}Merke: \textbf{In Reihenschaltungen addieren sich die Widerstände}
+
+\subsubsection{Parallelschaltung}
+Parallelschaltungen charakterisieren sich durch eine überall konstant vorliegende Spannung. Einzig die Stromstärke ist unterschiedlich und ermittelt sich durch den jeweiligen Widerstand aus $I_i = \tfrac{U}{R_i}$. Aus der Knotenregel folgt, die Summe aller gleichartigen Ströme ergibt den Gesamtstrom mit
+\begin{align} \label{eqn:Gesamtwiderstand Parallelschaltung}
+\boxed{R_{ges}= \frac{U}{I_{ges}} = \sum\limits_i \frac{1}{R_i} = \sum\limits_i G_i}
+\end{align}Merke: \textbf{Bei Parallelschaltungen addieren sich die Leitwerte}
+
+\subsection{Messgeräte (DMM)}
+Um quantitativ unsere aufgestellten Gesetzmäßigkeiten zu überprüfen sollten wir messbare Größen auch mit dafür ausgelegten Messgeräten durchführen. Die Problematik ist ähnlich der Unschärfe im Gebiet der Quantenmechanik, durch jede Messung wird das Ergebnis verfälscht. Wir können dann nicht mehr genau sagen, wie die Welt kurz vor dem Messvorgang sich darstellte.
+Können wir diese negativen Auswirkungen technisch verschwindend klein werden lassen, bleibt uns die Möglichkeit  zumindest durch statistische Betrachtungen unsere Ergebnisse und Theorien zu überprüfen.
+\paragraph{Amperemeter:} werden \textbf{in Reihe} geschaltet. Wird der Innenwiderstand $R_i$ sehr klein im Verhältnis zum Gesamtwiderstand $R$ der Schaltung, so ergibt sich der Verringerungsfaktor \begin{align*}
+\alpha = \frac{R}{R+R_i}
+\end{align*}Für $R_i$ spricht man von einem idealen Amperemter. Amperemter müssen immer \textbf{niederohmig} sein
+\paragraph{Voltmeter:} werden \textbf{parallel} geschaltet. Ein perfektes Voltmeter besitzt einen unendlich großen Innenwiderstand, so wird die Änderung der fließenden Ladungen kaum beeinträchtig (siehe unbelasteter Spannungsteiler)\begin{align*}
+I = \lim\limits_{R \rightarrow \infty}\left( \frac{U}{R}\right)
+\end{align*}Voltmeter sollten also einen möglichst großen Innenwiderstand (oft im Bereich von $M\Omega$ )gegen über  der Gesamtschaltung besitzen. Voltmeter müssen \textbf{hochohmig} sein
+
+\subsection{Brückenschaltung: Wheatstone }
