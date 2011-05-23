@@ -2,12 +2,12 @@
 \documentclass[%
 	pdftex,%              PDFTex verwenden da wir ausschliesslich ein PDF erzeugen.
 	a4paper,%             Wir verwenden A4 Papier.
-	%oneside,%             Einseitiger Druck.
-	twoside,%
+	oneside,%             Einseitiger Druck.
+	%twoside,%
 	12pt,              %  Grosse Schrift, besser geeignet f�r A4.
 	halfparskip,%         Halbe Zeile Abstand zwischen Abs�tzen.	
 	%chapterprefix,%       Kapitel mit 'Kapitel' anschreiben.
-	%headsepline,%         Linie nach Kopfzeile.
+	headsepline,%         Linie nach Kopfzeile.
 	footsepline,%         Linie vor Fusszeile.	
 	%bibtotocnumbered,%    Literaturverzeichnis im Inhaltsverzeichnis nummeriert einf�gen.
 	idxtotoc%             Index ins Inhaltsverzeichnis einfügen.
@@ -90,8 +90,8 @@
 \usepackage{scrtime}
 
 %Kopf- und Fußzeile
-\usepackage{fancyhdr}
-\pagestyle{fancy}
+%\usepackage{fancyhdr}
+%\pagestyle{fancy}
 %\fancyhf{}
  
 %Kopfzeile mittig mit Kaptilname
@@ -127,3 +127,6 @@
 \newcommand{\grad}{\ensuremath{\mathrm{grad\,}}} 
 \newcommand{\Fdiv}{\ensuremath{\mathrm{div\,}}} 
 
+%%% eigene Farben
+\definecolor{hellgrau}{gray}{0.85}
+%\colorbox{hellgrau}{\parbox{\textwidth}{Hier der Text, der in der Box erscheinen soll}}

@@ -91,7 +91,53 @@ Können wir diese negativen Auswirkungen technisch verschwindend klein werden la
 \alpha = \frac{R}{R+R_i}
 \end{align*}Für $R_i$ spricht man von einem idealen Amperemter. Amperemter müssen immer \textbf{niederohmig} sein
 \paragraph{Voltmeter:} werden \textbf{parallel} geschaltet. Ein perfektes Voltmeter besitzt einen unendlich großen Innenwiderstand, so wird die Änderung der fließenden Ladungen kaum beeinträchtig (siehe unbelasteter Spannungsteiler)\begin{align*}
-I = \lim\limits_{R \rightarrow \infty}\left( \frac{U}{R}\right)
+I = \lim\limits_{R \rightarrow \infty}\left( \frac{U}{R} \right)
 \end{align*}Voltmeter sollten also einen möglichst großen Innenwiderstand (oft im Bereich von $M\Omega$ )gegen über  der Gesamtschaltung besitzen. Voltmeter müssen \textbf{hochohmig} sein
 
-\subsection{Brückenschaltung: Wheatstone }
+\subsection{Brückenschaltung: Wheatstone}
+\begin{figure}\begin{center}
+\includegraphics[scale=0.3]{img/Wheatstone}\end{center}
+\caption{Wheatstone Brückenschaltung zur Messung vom $R_x$}
+\label{pic:Wheatstone}
+\end{figure}
+Die Wheatstone Brückenschaltung (Abb. \ref{pic:Wheatstone}) dient zur Bestimmung von zunächst unbekannten Widerständen. Die Schaltung ist sternförmig mit 4 Widerständen aufgebaut, wobei je 2 in Reihe geschaltet und zusammen eine Parallelschaltung darstellen.
+In einer dieser Schaltung ist der unbekannte Widerstand. Wichtig ist, dass mindestens einer der Widerstände veränderbar.
+Diesen Widerstand verändern wir in seiner Stärke so lange, bis durch die aufgespannte Brücke kein Strom mehr fliest, man spricht von einem \textbf{Abgleich der Brücke}.
+So sind demnach die Spannungsabfälle an $R_x$ und $R_3$ gleich (bzw. die gleiche Menge Ladung pro Zeit fließt dort entlang). Es ist damit
+\begin{align*} \begin{split}
+I_1 R_1 = I_2 R_2 \\
+I_1 R_x = I_2 R_3\end{split}
+\end{align*}Wir  teilen nun die obere durch die untere Gleichung und erhalten die bekannte Wheatstone Gleichung:
+\begin{align} \label{eqn:Wheatstone Schaltung}
+\boxed{\frac{R_1}{R_x} = \frac{R_2}{R_x}}
+\end{align}
+
+\subsection{Energie und Leistung elektrischer Ströme}
+Verschiebt sich eine Ladung Q (egal ob nun durch externe Krafteinwirkung oder durch zauberhafte Influenz) von Punkt P1 zu P2 so wird Energie in Form von 
+\begin{align} \label{eqn:Energie el. Strom}
+E_{frei} = Q\cdot U
+\end{align}zugeführt. Erinnerung: Diese Beziehung hatten wir durch das elektrostatische Potential für radialsymmetrische Felder gezeigt (\ref{eqn:defSpannung})
+Gemäß der Energie in einem Kondensator kann Energie im E-Feld gespeichert werden. Dies geschieht z.B. über einer Ladung und dessen kinetische Energie.
+\paragraph{Beispiel: Rasende Elektronen} \label{bsp:Elektronenbeschleunigung}
+Für viele Anwendungen benötigt man schnelle Elektronen die eine Bewegungsenergie besitzen (z.B. für Kollisionsuntersuchungen oder der \textbf{Fadenstrahlröhre}). Erhitzen wir eine Glühwendel durch Strom, so wird diese ab einer bestimmten Stromstärke im sichtbaren Spektrum leuchten. Genau hier treten Elektronen aus dem Leiter, man nennt dies den "`glühelektrischen Effekt"'.
+Diese erzeugten Elektronen sollen in einem E-Feld beschleunigt werden (Die geschieht z.B. durch eine positiv geladene Metallplatte, zu dieser die Elektronen hin wandern möchten). Gehen wir davon aus, dass die \textbf{komplette elektrische Energie in Bewegungsenergie} umgewandelt werden kann ergibt sich für die Beträge sich\begin{align*}
+E = q \cdot U &= \frac{1}{2} m v^2 \\
+ v &= \sqrt{\frac{2qU}{m}} 
+\end{align*}Die Beschleunigung kann so aber nur störungsfrei ablaufen, wenn es nicht zu viele Stoßpartner gibt. Ideal sit natürlich ein Fein-Vakuum. Wobei diese schöne Formel zudem nur für geringe Geschwindigkeiten gilt, bis hin zu ungefähr 5\% Vakuumlichtgeschwindigkeit.
+
+Was ist uns also gelungen? Wir können Teilchen Energien zuordnen, obwohl diese selbst keine Ladungsmaterie sind, sie sind nur die Überträger. Es zeigt sich als sinnvoll eine Basisgröße einzuführen. \textbf{Elektronenvolt} beschreibt die  Energie, die ein Elektron mit der Ladung e und der Spannung 1V erfährt. \begin{align} \label{eqn:Elektronenvolt}
+\boxed{1eV = 1.6 \cdot 10^{-19} C \cdot V = 1.6 \cdot 10^{-19}J}
+\end{align}
+ 
+ Die Vorstellung, dass Elektronen Energie Energie transportieren können ist heikel, denn schon in Leitern wird diese Energie meist in thermische Wärmestrahlung umgewandelt. Die Größenordnung dieser Abstrahlung ergibt sich nach dem Gesetz von Joule
+ 
+ 
+\subsection{Gesetz von Joule - el. Leistung}
+Erinnern wir uns an die Arbeit W (\ref{eqn:Energie el. Strom}). Für U=const ergibt sich die zeitliche Änderung der Arbeit als Leistung (alles strikt nach der klassischen Mechanik)
+\begin{align} \label{eqn:elLeistung}
+P = \dot{W} = \frac{d (U\cdot Q)}{dt} = U \cdot \dot{Q} = U \cdot I
+\end{align} Merken wir uns die einfache Form für die \textbf{elektrische Leistung}
+\begin{align*}
+\boxed{P = U \cdot I}
+\end{align*}
+Für einen ohmschen Leiter ergibt sich mit $U = RI$, dass $P = RI^2$ ist.
