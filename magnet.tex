@@ -1,0 +1,206 @@
+\section{Magnetostatik}
+Ähnlich den elektrischen Feldern wollen wir nun das Phänomen von magnetischen Feldern beschreiben.
+Vorweg soll nicht unerwähnt bleiben, dass wir dass "`Warum"' der Magnetostatik nicht erklären können. Dies ist der Quantenphysik vorbehalten, bleibt uns also zunächst verschlossen.
+Sehr wohl können wir die Ergebnisse, die die Magnetostatik erzeugt genauer untersuchen. Ladungen in solchen Feldern, Ablenkungen und Feldlinien. Vieles, was wir noch aus der Elektrostatik kennen, finden wir hier wieder.
+
+\subsection{Die  magnetische Feldstärke}
+Magnetische Felder werden durch den Begriff der Feldstärke charakterisiert. Eine übliche Abkürzung hierfür sind \textbf{B-Felder}. Die Einheit dieser Größe wird beschrieben durch \textit{Tesla}. \begin{align} \label{eqn:EinheitTesla}
+\left[B \right] = 1T
+\end{align}
+\paragraph{Feldlinienbilder} konzentrisch um langen Leiter, horizontae lange Linien entlang eines Leiters von oben betrachtet. ACHTUNG Bilder ergänzen!
+
+\paragraph{Feldstärke} Zwei gerade parallel angeordnete Leiterströme (mit anti-parallel verlaufenden Strömen) erfahren eine Abstoßung. \\
+Wir nehmen zunächst an, dass jeder einzelne \textbf{Leiter} ein\textbf{ B-Feld erzeugen} kann. Wobei jedes Feld senkrecht zum Leiter und radial mit Abstand zum Leiter verläuft. 
+
+Die Versuche von Oersted und Rowland zeigten, dass diese Vorstellung keineswegs abstrus ist. So konnten sie zeigen, dass Magnetfelder von stromdurchflossenen Leitern stets proportional zum Quotienten aus Stromstärke I und Abstand  r sind.
+\begin{align*}
+B \propto \frac{I}{r}
+\end{align*}
+Mit der  Proportionalitätskonstante $\frac{\mu_0}{2\pi}$ können wir unserer erste Gleichung aufstellen
+\begin{align} \label{eqn:magFeldstärke}
+B_i = \frac{\mu_0}{2\pi} \frac{I_i}{r}
+\end{align}
+Für den allgemeinen vektoriellen Fall ergibt sich das die \textbf{Feldstärke eines unendlich lang ausgedehnten Leiter} und dem konstanten Strom I
+\begin{align} \label{def:magFeldstärke}
+\boxed{\vec{B} = \frac{\mu_0}{2\pi} \frac{I}{r} \hat{r}}
+\end{align}
+\subsection{Kraft zwischen zwei stromdurchflossenen Leitern}
+Für einen Leiter der Länge L und der Stromstärke I ergibt sich für die Kraft eines weiteren stromdurchflossenen Leiters (Voraussetzung: Die Größen $l,B,I$ bilden eine orthogonale Basis).
+\begin{align} \label{eqn:KraftstromDruchfl}
+F = I \cdot l \cdot B
+\end{align} Das Produkt $I \cdot l$ kann als die "`Ladung"' angesehen werden, entspricht damit der Vorstellung einer Kraft auf  Probeladungen im elektrischen Feld (\ref{eqn:Coulomb-Gesetz}).
+Man fragt sich jetzt was passiert, wenn die Größen nicht senkrecht aufeinander stehen. Die Amperschen Versuche zeigten, dass Leitströme senkrecht zueinander keine Kraftwirkung hervorrufen.
+Es wirkt also jeweils nur die jeweilige senkrechte Komponente $\sin \left(l,B \right)$. Dieses Verhalten erinnert uns an das Vektorprodukt zweier Größen.
+\\ Und tatsächlich gilt für die Kraft im vektoriellen Fall
+\begin{align} \label{eqn:KRaftBFeld_vec}
+\boxed{\vec{F} = I \left( \vec{l} \times \vec{B}\right)}
+\end{align}
+Bedingung ist jedoch, dass über die komplette Leiterlänge das B-Feld konstant bleibt. Ist dies nicht gegeben, so ist es sinnvoll genügend kleine Leiterstückchen zu betrachten um inhomogene Betrachtungen durch Integration zu vereinfachen. Es ergibt sich
+\begin{align} \label{eqn:KraftBFeld_infintesimal}
+d\vec{F} = I \left( d\vec{l} \times \vec{B}\right)
+\end{align}
+\subsection{Die Lorentzkraft}
+Erlauben wir uns zunächst eine kleine Vorbemerkung. Elektrischer Stromfluss kann nur in einem geschlossenen Leiter fließen.
+\begin{align*}
+\oint \limits_{Stromkreis} I d\vec{l} = 0
+\end{align*} Solch ein Stromfeld muss also konservativ sein, Ladungen dürfen nicht verloren gehen. Diese Eigenschaft wird uns für viele Überlegungen nützlich sein, auch wenn sie manchmal nicht explizit erwähnt wird.
+
+Bewegen sich freie Elektronen (dQ) im Leiter mit einer festen Geschwindigkeit v und durchstreichen dabei ein Leiterstück dl
+\begin{align*}
+\vec{v }			&= \frac{d\vec{l}}{dt}\\
+dQ \cdot \vec{v} 	&= dQ  \cdot \frac{dl}{dt} \\
+			&= I d\vec{l}
+\end{align*}
+Setzen wir den letzten Ausdruck in Gleichung \ref{eqn:KraftBFeld_infintesimal} ein, so ergibt sich 
+\begin{align*}
+d\vec{F} = dQ \left( \vec{v} \times \vec{B} \right) \qquad \bigg| \int
+\end{align*} Die sich ergebende Kraft nennen wir \textbf{Lorentzkraft}
+\begin{align} \label{eqn:Lorentzkraft}
+\vec{F} = q \left( \vec{v} \times \vec{B} \right)
+\end{align}
+Wirkt zudem ein elektrisches Feld auf den Ladungsträger, überlagert sich die Kraftwirkung von E-Feld und B-Feld
+\begin{align} \label{eqn:Lorentzkraft E-Feld}
+\vec{F} = q \left( \vec{E} + \vec{v}  \times \vec{B}\right)
+\end{align}
+\subsection{Fadenstrahlröhre}
+Ein typischer Einführungsversuch in die Atomphysik, dieser ist jedoch so anschaulich für die Lorentzkraft, so dass wir ihn hier genauer behandeln wollen.
+
+\begin{figure}\begin{center}
+\includegraphics[scale=0.5]{img/fadenstrahl}\end{center}
+\caption{Typischer Aufbau einer Fadenstrahlröhre. Bildquelle \textit{LP Uni Göttingen}}
+\label{pic:Fadenstrahlröhre}
+\end{figure}
+
+\subparagraph{Versuchsanordnung} Eine Glühwendel erzeugt durch den glühelektrischen Effekt freie Elektronen (Elektronenwolke). Die werden durch eine Anoden Beschleunigungsstrecke geführt. Eine Fokussierung bewirkt der Wehneltzylinder (Geschwindigkeitsfilter).
+Diese schnellen Elektronen werden in einem Glaszylinder mit Leuchtgas geführt (Druck zwischen 0.1 - 1Bar). Je nach angelegtem homogen Magnetfeld werden die Elektronen unterschiedlich abgelenkt. 
+\subparagraph{Beobachtung}Treffen schnelle Elektronen in das Gasgemisch, so kann man sehen, dass sich ein kleiner Lichtstrahl ausbildet.
+Dieser Lichtstrahl  bildet sich tangential zu den ausströmenden Elektronen. Wird ein homogenes Magnetfeld angelegt (erzeugt durch ein Helmholzspulenpaar des Radius R im Abstand R) so werden die Elektronen abgelenkt.
+Je nach Ausströmrichtung der Elektronen bildet sich eine Kreisbahn oder aber eine Schraubenbahn aus. 
+\subparagraph{Wichtige Gleichungen}
+Die Elektronen werden aus dem Ruhezustand ($v_a \approx 0$) durch die Anode im E-Feld beschleunigt. Wird diese komplett in innere kinetische Energie umgewandelt, welche wir gerade durch die Def. der Spannung eingeführt hatten (\ref{eqn:defSpannung}) $W = e  U $.
+\begin{align*}
+\boxed{e \cdot U = \frac{1}{2}m \vec{v}^{\, 2}}
+\end{align*} Betrachten wir ab jetzt nur noch den Fall, dass alle wichtigen Größen eine Basis bilden. \par 
+\begin{align} \label{eqn:ElektronenFadenstrahlGeschw}
+v = \sqrt{\frac{2 \cdot U \cdot e}{m}}
+\end{align}Mit e als Elementarladung, m die Elektronenmasse und U der Beschleunigungsspannung
+
+Diese schöne Gleichung gibt uns nicht nur die Möglichkeit die\textbf{ spezifische Ladung} $\tfrac{e}{m}$ zu bestimmen, wir können so auch näherungsweise die mittlere \textbf{Geschwindigkeit} ermitteln, mit der die Elektronen das Leuchtgas anregen, worauf dieses Licht emittiert (mehr dazu in Physik 3). Schon für Spannungen von einigen kV ergeben sich Geschwindigkeiten von $2 \cdot 10^{7} m/s$ , schon höhere Spannungen sind mit unserer Formel nicht zu beschreiben.
+Die gemessene Geschwindigkeit fällt stets geringer aus, als es unsere Zauberformel vorhersagt.  Problematisch ist die wachsende \textbf{relativistische Bedeutung} bei hohen Geschwindigkeiten.
+\\ Sei hier ein kleiner Ausflug in die relativistische Welt erlaubt. Der relative Energiesatz beschreibt den Gesamtzustand eines System mit der Energie E, Impuls p, Vakuumlichtgeschwindigkeit c und der Ruheenergie $E_0$.
+\begin{align} \label{eqn:relEnergiesatz}
+E^2 = (pc)^2 + (E_0)^2
+\end{align}
+
+\subsubsection{Spezifische Ladung}
+Zurück zur Beschreibung der Elektronen in der Fadenstrahlröhre. Bildet sich z.B. eine \textbf{Kreisbahn} aus (Für Schraubenbahnen gelten alle Formulierungen uneingeschränkt für den jeweiligen senkrechten Anteil der Geschwindigkeit).
+Da die Elektronen wie durch \textit{Zauberhand} auf einer Bahn gehalten wird, nehmen wir an, dass die wirkende \textbf{Lorentzkraft und Zentripetalkraft} gerade ein Gleichgewicht bilden. Hinweis: $v \perp B$
+
+\begin{align} \label{eqn:Ansatz Fadenstrahlröhre}
+m \frac{v^2}{r} 	&= e \cdot v \cdot B \\ 
+\frac{e}{m}			&= \frac{v}{r \cdot B} \qquad  \bigg|^2
+\end{align}Durch den kleinen Trick des Quadrierens  kann $v^2$ durch \ref{eqn:ElektronenFadenstrahlGeschw} eliminiert werden. Dies führt uns zu 
+\begin{align*}
+\frac{e^2}{m^2} = \frac{2Ue}{m(rB)^2}
+\end{align*}Nach Kürzen von e und m ergibt sich die Gleichung zur Bestimmung der \textbf{spezifischen Ladung} mit einer Fadenstrahlröhre.
+\begin{align} \label{eqn:spezifischeLadung}
+\boxed{\frac{e}{m} = \frac{2 \cdot U }{\left(r \cdot B \right)^2}}
+\end{align}
+\subsubsection{Larmorradius}
+Wie schon bei der spezifischen Ladung bzw. Ausströmgeschwindigkeit der Elektronen lassen sich recht einfach gute Aussagen tätigen.  Der Radius ist kaum komplexer. 
+Stellen wir \ref{eqn:Ansatz Fadenstrahlröhre} nach r um erhalten wir den Radius um denen sich die Elektronen gerade im Raum bewegen.
+\begin{align} \label{eqn:Larmorradius}
+\boxed{R_l = \frac{m \cdot v}{e \cdot B}}
+\end{align} Und nennen diese charakteristische Größe \textbf{Larmorradius}. 
+
+\subsubsection{Zyklotronfrequenz}
+Bewegt sich etwas zyklisch, so ist die Frequenz interessant. Dass in unserem Beispiel die Elektronen eine hohe Umlauffrequenz haben dürften, entnehmen wir unseren Beobachtungen. Ein Flackern / Aufleuchten konnten wir nämlich nicht feststellen. 
+Ist $v \perp r$ so gilt $\omega = \frac{v}{r}$. Für unsere Zentripetalkraft muss also gelten
+\begin{align*}
+m \, \omega^2 R_l = e \, v \, B
+\end{align*}
+\begin{align} \label{eqn:Zyklotronfrequenz}
+\boxed{\omega_{Zykl} = \frac{e}{m} B}
+\end{align}Wir stellen erstaunt fest, dass die Umlauffrequenz einzig von der spezifischen Ladung und dem B-Feld abhängig ist, jedoch nicht vom gewählten Radius!
+morgen: Zyklotron als Beschleuniger 
+
+\subsection{Halleffekt}
+\begin{figure}\begin{center}
+\includegraphics[scale=0.8]{img/Hall.png}\end{center}
+\caption{Der Halleffekt wird durch die Verschiebung freier Leitungselektronen mit der Lorentzkraft hervorgerufen. Quelle:\textit{www.schule-bw.de} }
+\label{pic:Halleffekt}
+\end{figure}
+Ist einer der elementaren Versuchen zur Untersuchung, dass Leiter tatsächlich  freie Ladungsträger besitzen. \par 
+Nehmen wir zunächst eine dünne Metallplatte durchströmt vom konstanten Strom I. Gleichzeitig legen wir ein B-Feld an, das senkrecht Plattenebene steht. Wenn wir uns bildlich vorstellen, dass die freien Ladungsträger im B-Feld durch die Lorentzkraft (\ref{eqn:Lorentzkraft}) abgelenkt werden. Nach einiger Zeit sammeln sich vermehrt Elektronen an einer Seitenkante an, ein Potential bildet sich also aus. Dieses Potential nennen wir \textbf{Hallspannung}
+\begin{align} \label{eqn:Hallspannung}
+\boxed{U_H = R_H \cdot I}
+\end{align}oder aber $U_H = A_H \cdot B \cdot \frac{I}{d}$. Wobei $R_H$ der Hallwiderstand, $A_H$ der Hallkoeffizient und d die Plattendicke ist. 
+Die Hallspannung ist materialabhängig und  gemäß \ref{eqn:Hallspannung} umso größer, je höher der Hallwiderstand wird. Kupfer besitzt einen vergleichsweise kleinen Hallwiderstand von $-6 \cdot 10^{-5} \mathrm{\frac{cm^3}{As}}$, hingegen Bismut mit $R_H = -0.9\mathrm{\frac{cm^3}{As}}$ relativ hohe Hallspannungen erlaubt. Man setzt es daher gerne für die Magnetfeldbestimmung in \textbf{Hallsonden} ein.
+
+\subparagraph{Herleitung}
+Der Strom $I$ (j = const) ist definiert als
+\begin{align}
+I 			= \int \vec{j} \cdot d\vec{A} = j \int dA = j \cdot A = j \cdot b\,d\\
+\boxed{j 	= \frac{I}{b\, d} = n (-e) v_{drift}} \label{eqn:stromdichte_Drift}
+\end{align}
+
+Lenkt das B-Feld die freien Ladungsträger mit der Geschwindigkeit $v_{drift}$ ab, so wirkt hier die Lorentzkraft. Nehme weiter an, dass $\vec{v}_{drift}$ und $\vec{B}$ orthogonal zueinander stehen.
+\begin{align} \label{eqn:HallHerleitung LKraft}
+\vec{F_L} &= q \left(\vec{v}_{drift}  \times \vec{B} \right) \qquad  \bigg| \vec{v}_{drift} \perp \vec{B} \\
+F 			&= q \, v_{drift} \, B
+\end{align}
+Bis jetzt  nehmen wir an, dass die Lorentzkraft die einzig wirkende Kraft ist, durch die die Elektronen abgelenkt werden. Unsere Versuche konnten jedoch zeigen, dass die Hallsonde nicht komplett durchlässig für Elektronen wird und eine Spannung messbar ist. \par 
+Nach einiger Zeit sammeln sich so viele Elektronen an einer jeweiligen Plattenkante an, dass es zur Ausbildung eines \textbf{E-Feldes} kommt. Dieses E-Feld wiederum lenkt Elektronen, die durch die Lorentzkraft abgelenkt werden wieder zurück. Man kann sich einen Hall-Leiter als kleinen Plattenkondensator mit angelegter Plattenspannung sowie schnellen Elektronen, die in einem B-Feld abgelenkt werden.
+Es stellt sich nach einer gewissen Zeit ein Gleichgewicht zwischen  elektrischer Kraft und Lorentzkraft ein.
+Mit $F_{el} = e\, E = \frac{U_H e}{d}$ und $F_L = e \, v_{drift} \, B$
+\begin{align*}
+F_{el} &= F_{L} \\
+\frac{U_H e}{d} &= e \, v_{drift} \, B\\
+U_H &= v_{drift} \, d \, B
+\end{align*} Ersetzen wir nun $v_{drift}$ durch den Ausdruck in \ref{eqn:Stromdichte_Drift}. Dann bekommen wir
+
+\begin{align}
+\boxed{U_H = \frac{j}{n\, e} d \, B = \frac{I}{n \, e \,b} B }
+\end{align}
+Wenn wir uns an die Ohmsche Definition des Widerstands (\ref{Ohmsches Gesetz}) erinnern. Für Hallspannungen wird sich ergeben
+\begin{align} \label{eqn:Hall Ohm}
+\boxed{U_H = R_H I}
+\end{align} Und tatsächlich können wir unsere Hallspannung in geschickte Faktoren unterteilen
+\begin{align} \label{eqn:HallspannungDef}
+\boxed{U_H = \underbrace{\frac{B}{n \, e \,b}}_{R_H} I}
+\end{align}Wobei $\frac{1}{n\, e}$ eine Materialspezifische Größe bildet , $B, \,d$ hingegen beeinflussbar sind.
+
+Anwendung findet der Halleffekt in der Messung von Magnetfeldern und der Elektronendichte $n$ von Stoffen.
+
+\subsection{Magnetisches Moment}
+\begin{align} \label{eqn:Magnetisches Moment1}
+\vec{D} = I \vec{A} \times \vec{B}
+\end{align} $\vec{A}$ ist hierbei der Flächennormalenvektor. Häufig ordnet man der vektoriellen Größe magnetisches Moment $I \,\vec{A}$  $\vec{\mu}$ bzw. $\vec{p_m}$ zu. So ergibt sich (wie beim elektrischen Moment)
+\begin{align} \label{eqn:Magnetisches Moment}
+\boxed{\vec{D} = \vec{p_m} \times \vec{B}}
+\end{align}
+
+\subsection{Biot-Savart Gesetz}
+Um Elektrische Felder zu bestimmen, benutzen wir vorher die Integration über geeignete Teilflächen, danach lernten wir den Gaußschen Satz kennen, der einiges vereinfachte und uns die erste Maxwellsche Gleichung brachte.
+Gleiches ist auch für B-Felder möglich. Hier wollen wir zunächst das B-Feld eines sehr kleinen Leiterstückchens betrachten, das an einem Ort $\vec{r}$ ein Magnetfeld $d\vec{B}$ hervorruft. 
+
+Das Gesetz von Biot-Savart soll hier nicht hergeleitet werden, die Anwendung ist viel wichtiger.
+\begin{align} \label{eqn:Biot-Savart}
+\boxed{d\vec{B} = \frac{\mu_0}{4\pi} I \frac{d\vec{l} \times \vec{r}}{r^3}}
+\end{align}$d\vec{l}$ gibt den Betrag des infinitesimalen Leiterstücks in tangentialer Stromrichtung an. $\frac{\vec{r}}{r^3} = \frac{\hat{e}_r}{r^2}$ Gibt die Abschwächung des Magnetfelds im Abstandsquadrat an.   Haben wir schon einmal $d\vec{B}$ bestimmt, ist es ein leichtes $\vec{B}$ zu 
+ermitteln.
+Durch Integration ergibt sich $\vec{B} = \int d\vec{b}$ 
+Diese Beziehung erlaubt es uns jedes beliebige Magnetfeld einer beliebigen Stromverteilung zu beschreiben. Symmetrische Probleme lassen sich natürlich einfacher lösen, sofern man die Symmetrie und geeignete Koordinatensysteme nutzt.
+\subparagraph{Beispiel: Magnetfeld eines stromdurchflossenen Leiters}
+Noch einfügen
+
+\subsection{Amperesches Gesetz}
+\subsection{Magnetisches Potential}
+\subsection{Materie im Magnetfeld}
+\subsubsection{Induzierte Dipole} Diamagnetismus
+\subsubsection{Permanente Dipole}
+\subsubsection{Ferromagnetismus}
+\subparagraph{Hysteresekurve}
+\subparagraph{Steighöhe}
+
+\section{Maxwellgleichungen}
