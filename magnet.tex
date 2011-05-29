@@ -1,0 +1,117 @@
+\section{Magnetostatik}
+Ähnlich den elektrischen Feldern wollen wir nun das Phänomen von magnetischen Feldern beschreiben.
+Vorweg soll nicht unerwähnt bleiben, dass wir dass "`Warum"' der Magnetostatik nicht erklären können. Dies ist der Quantenphysik vorbehalten, bleibt uns also zunächst verschlossen.
+Sehr wohl können wir die Ergebnisse, die die Magnetostatik erzeugt genauer untersuchen. Ladungen in solchen Feldern, Ablenkungen und Feldlinien. Vieles, was wir noch aus der Elektrostatik kennen, finden wir hier wieder.
+
+\subsection{Die  magnetische Feldstärke}
+Magnetische Felder werden durch den Begriff der Feldstärke charakterisiert. Eine übliche Abkürzung hierfür sind \textbf{B-Felder}. Die Einheit dieser Größe wird beschrieben durch \textit{Tesla}. \begin{align} \label{eqn:EinheitTesla}
+\left[B \right] = 1T
+\end{align}
+\paragraph{Feldlinienbilder} konzentrisch um langen Leiter, horizontae lange Linien entlang eines Leiters von oben betrachtet. ACHTUNG Bilder ergänzen!
+
+\paragraph{Feldstärke} Zwei gerade parallel angeordnete Leiterströme (mit anti-parallel verlaufenden Strömen) erfahren eine Abstoßung. \\
+Wir nehmen zunächst an, dass jeder einzelne \textbf{Leiter} ein\textbf{ B-Feld erzeugen} kann. Wobei jedes Feld senkrecht zum Leiter und radial mit Abstand zum Leiter verläuft. 
+
+Die Versuche von Oersted und Rowland zeigten, dass diese Vorstellung keineswegs abstrus ist. So konnten sie zeigen, dass Magnetfelder von stromdurchflossenen Leitern stets proportional zum Quotienten aus Stromstärke I und Abstand  r sind.
+\begin{align*}
+B \propto \frac{I}{r}
+\end{align*}
+Mit der  Proportionalitätskonstante $\frac{\mu_0}{2\pi}$ können wir unserer erste Gleichung aufstellen
+\begin{align} \label{eqn:magFeldstärke}
+B_i = \frac{\mu_0}{2\pi} \frac{I_i}{r}
+\end{align}
+Für den allgemeinen vektoriellen Fall ergibt sich das die \textbf{Feldstärke eines unendlich lang ausgedehnten Leiter} und dem konstanten Strom I
+\begin{align} \label{def:magFeldstärke}
+\boxed{\vec{B} = \frac{\mu_0}{2\pi} \frac{I}{r} \hat{r}}
+\end{align}
+\subsection{Kraft zwischen zwei stromdurchflossenen Leitern}
+Für einen Leiter der Länge L und der Stromstärke I ergibt sich für die Kraft eines weiteren stromdurchflossenen Leiters (Voraussetzung: Die Größen $l,B,I$ bilden eine orthogonale Basis).
+\begin{align} \label{eqn:KraftstromDruchfl}
+F = I \cdot l \cdot B
+\end{align} Das Produkt $I \cdot l$ kann als die "`Ladung"' angesehen werden, entspricht damit der Vorstellung einer Kraft auf  Probeladungen im elektrischen Feld (\ref{eqn:Coulomb-Gesetz}).
+Man fragt sich jetzt was passiert, wenn die Größen nicht senkrecht aufeinander stehen. Die Amperschen Versuche zeigten, dass Leitströme senkrecht zueinander keine Kraftwirkung hervorrufen.
+Es wirkt also jeweils nur die jeweilige senkrechte Komponente $\sin \left(l,B \right)$. Dieses Verhalten erinnert uns an das Vektorprodukt zweier Größen.
+\\ Und tatsächlich gilt für die Kraft im vektoriellen Fall
+\begin{align} \label{eqn:KRaftBFeld_vec}
+\boxed{\vec{F} = I \left( \vec{l} \times \vec{B}\right)}
+\end{align}
+Bedingung ist jedoch, dass über die komplette Letierlänge das B-Feld konstant bleibt. Ist dies nicht gegeben, so ist es sinnvoll genügend kleine Leiterstückchen zu betrachten um inhomogene Betrachtungen durch Integration zu vereinfachen. Es ergibt sich
+\begin{align} \label{eqn:KraftBFeld_infintesimal}
+d\vec{F} = I \left( d\vec{l} \times \vec{B}\right)
+\end{align}
+\subsection{Die Lorentzkraft}
+Erlauben wir uns zunächst eine kleine Vorbemerkung. Elektrischer Stromfluss kann nur in einem geschlossenen Leiter fließen.
+\begin{align*}
+\oint \limits_{Stromkreis} I d\vec{l} = 0
+\end{align*} Solch ein Stromfeld muss also konservativ sein, Ladungen dürfen nicht verloren gehen. Diese Eigenschaft wird uns für viele Überlegungen nützlich sein, auch wenn sie manchmal nicht explizit erwähnt wird.
+
+Bewegen sich freie Elektronen (dQ) im Leiter mit einer festen Geschwindigkeit v und durchstreichen dabei ein Leiterstück dl
+\begin{align*}
+\vec{v }			&= \frac{d\vec{l}}{dt}\\
+dQ \cdot \vec{v} 	&= dQ  \cdot \frac{dl}{dt} \\
+			&= I d\vec{l}
+\end{align*}
+Setzen wir den letzten Ausdruck in Gleichung \ref{eqn:KraftBFeld_infintesimal} ein, so ergibt sich 
+\begin{align*}
+d\vec{F} = dQ \left( \vec{v} \times \vec{B} \right) \bigg| \int
+\end{align*} Die sich ergebende Kraft nennen wir \textbf{Lorentzkraft}
+\begin{align} \label{eqn:Lorentzkraft}
+\vec{F} = q \left( \vec{v} \times \vec{B} \right)
+\end{align}
+Wirkt zudem ein elektrisches Feld auf den Ladungsträger, überlagert sich die Kraftwirkung von E-Feld und B-Feld
+\begin{align} \label{eqn:Lorentzkraft E-Feld}
+\vec{F} = q \left( \vec{E} + \vec{v}  \times \vec{B}\right)
+\end{align}
+\subsection{Fadenstrahlröhre}
+Ein typischer Einführungsversuch in die Atomphysik, dieser ist jedoch so anschaulich für die Lorentzkraft, so dass wir ihn hier genauer behandeln wollen. 
+\subparagraph{Versuchsanordnung} Eine Glühwendel erzeugt durch den glühelektrischen Effekt freie Elektronen (Elektronenwolke). Die werden durch eine Anoden Beschleunigungsstrecke geführt. Eine Fokussierung bewirkt der Wehneltzylinder (Geschwindigkeitsfilter).
+Diese schnellen Elektronen werden in einem Glaszylinder mit Leuchtgas geführt (Druck zwischen 0.1 - 1Bar). Je nach angelegtem homogen Magnetfeld werden die Elektronen unterschiedlich abgelenkt. 
+\subparagraph{Beobachtung}Treffen schnelle Elektronen in das Gasgemisch, so kann man sehen, dass sich ein kleiner Lichtstrahl ausbildet.
+Dieser Lichtstrahl  bildet sich tangential zu den ausströmenden Elektronen. Wird ein homogenes Magnetfeld angelegt (erzeugt durch ein Helmholzspulenpaar des Radius R im Abstand R) so werden die Elektronen abgelenkt.
+Je nach Ausströmrichtung der Elektronen bildet sich eine Kreisbahn oder aber eine Schraubenbahn aus. 
+\subparagraph{Wichtige Gleichungen}
+Die Elektronen werden aus dem Ruhezustand ($v_a \approx 0$) durch die Anode im E-Feld beschleunigt. Wird diese komplett in innere kinetische Energie umgewandelt, welche wir gerade durch die Def. der Spannung eingeführt hatten (\ref{eqn:defSpannung}) $W = e  U $.
+\begin{align*}
+\boxed{e \cdot U = \frac{1}{2}m \vec{v}^{\, 2}}
+\end{align*} Betrachten wir ab jetzt nur noch den Fall, dass alle wichtigen Größen eine Basis bilden. \par 
+\begin{align} \label{eqn:ElektronenFadenstrahlGeschw}
+v = \sqrt{\frac{2 \cdot U \cdot e}{m}}
+\end{align}Mit e als Elementarladung, m die Elektronenmasse und U der Beschleunigungsspannung
+
+Diese schöne Gleichung gibt uns nicht nur die Möglichkeit die\textbf{ spezifische Ladung} $\tfrac{e}{m}$ zu bestimmen, wir können so auch näherungsweise die mittlere \textbf{Geschwindigkeit} ermitteln, mit der die Elektronen das Leuchtgas anregen, worauf dieses Licht emittiert (mehr dazu in Physik 3). Schon für Spannungen von einigen kV ergeben sich Geschwindigkeiten von $2 \cdot 10^{7} m/s$ , schon höhere Spannungen sind mit unserer Formel nicht zu beschreiben.
+Die gemessene Geschwindigkeit fällt stets geringer aus, als es unsere Zauberformel vorhersagt.  Problematisch ist die wachsende \textbf{relativistische Bedeutung} bei hohen Geschwindigkeiten.
+\\ Sei hier ein kleiner Ausflug in die relativistische Welt erlaubt. Der relative Energiesatz beschreibt den Gesamtzustand eines System mit der Energie E, Impuls p, Vakuumlichtgeschwindigkeit c und der Ruheenergie $E_0$.
+\begin{align} \label{eqn:relEnergiesatz}
+E^2 = (pc)^2 + (E_0)^2
+\end{align}
+
+\subsubsection{Spezifische Ladung}
+Zurück zur Beschreibung der Elektronen in der Fadenstrahlröhre. Bildet sich z.B. eine \textbf{Kreisbahn} aus (Für Schraubenbahnen gelten alle Formulierungen uneingeschränkt für den jeweiligen senkrechten Anteil der Geschwindigkeit).
+Da die Elektronen wie durch \textit{Zauberhand} auf einer Bahn gehalten wird, nehmen wir an, dass die wirkende \textbf{Lorentzkraft und Zentripetalkraft} gerade ein Gleichgewicht bilden. Hinweis: $v \perp B$
+
+\begin{align} \label{eqn:Ansatz Fadenstrahlröhre}
+m \frac{v^2}{r} 	&= e \cdot v \cdot B \\ 
+\frac{e}{m}			&= \frac{v}{r \cdot B} \qquad  \bigg|^2
+\end{align}Durch den kleinen Trick des Quadrierens  kann $v^2$ durch \ref{eqn:ElektronenFadenstrahlGeschw} eliminiert werden. Dies führt uns zu 
+\begin{align*}
+\frac{e^2}{m^2} = \frac{2Ue}{m(rB)^2}
+\end{align*}Nach Kürzen von e und m ergibt sich die Gleichung zur Bestimmung der \textbf{spezifischen Ladung} mit einer Fadenstrahlröhre.
+\begin{align} \label{eqn:spezifischeLadung}
+\boxed{\frac{e}{m} = \frac{2 \cdot U }{\left(r \cdot B \right)^2}}
+\end{align}
+\subsubsection{Larmorradius}
+Wie schon bei der spezifischen Ladung bzw. Ausströmgeschwindigkeit der Elektronen lassen sich recht einfach gute Aussagen tätigen.  Der Radius ist kaum komplexer. 
+Stellen wir \ref{eqn:Ansatz Fadenstrahlröhre} nach r um erhalten wir den Radius um denen sich die Elektronen gerade im Raum bewegen.
+\begin{align} \label{eqn:Larmorradius}
+\boxed{R_l = \frac{m \cdot v}{e \cdot B}}
+\end{align} Und nennen diese charakteristische Größe \textbf{Larmorradius}. 
+
+\subsubsection{Zyklotronfrequenz}
+Bewegt sich etwas auf einer Kreisfrequenz, so ist spannend zu wissen, wie schnell sie dies tun. Dass in unserem Beispiel die Elektronen eine hohe Umlauffrequenz haben, entnehmen wir unseren Beobachtungen. Ein Flackern / Aufleuchten konnten wir nicht feststellen. 
+Ist $v \perp r$ so gilt $\omega = \frac{v}{r}$. Für unsere Zentripetalkraft muss also gelten
+\begin{align*}
+m \, \omega^2 R_l = e \, v \, B
+\end{align*}
+\begin{align} \label{eqn:Zyklotronfrequenz}
+\boxed{\omega_{Zykl} = \frac{e}{m} B}
+\end{align}Wir stellen erstaunt fest, dass die Umlauffrequenz einzig von der spezifischen Ladung und dem B-Feld abhängig ist, jedoch nicht vom gewählten Radius!
