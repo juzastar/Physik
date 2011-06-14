@@ -194,9 +194,57 @@ Diese Beziehung erlaubt es uns jedes beliebige Magnetfeld einer beliebigen Strom
 \subparagraph{Beispiel: Magnetfeld eines stromdurchflossenen Leiters}
 Noch einfügen
 
-\subsection{Amperesches Gesetz}
-Erinnern wir uns an die Gaußsche Formulierung für 
-\subsection{Magnetisches Potential}
+\subsection{Amperesches Gesetz} \label{sec:Amperesches Gesetz}
+Häufig auch als \textit{Durchflutungsgesetz} bezeichnet, wir wollen hier jedoch zu Ehren André-Marie Ampères den Begriff des Ampereschen Gesetz gebrauchen. \\
+Erinnern wir uns an die Gaußsche Formulierung für Elektrische Felder. Sie erleichterte uns die Berechnung $ \oint \vec{E} d\vec{A} = \tfrac{Q}{\epsilon_0}$.
+Wir kennen mittlerweile, dass es keine magnetischen Monopole/Quellen geben kann. Eine Hüllfläche um eine magnetische Erzeugung zu legen ist also nicht zweckmäßig \footnote{Hieran scheiterten auch die alten Physiker, die nach den magnetischen Elementarteilchen suchten, in Analogie zur Elektrostatik} \par
+Aus dem vorherigen Abschnitt kennen wir die Tatsache, dass Leiterströme (egal ob makroskopisch oder sinnbildliche Leiterströme durch einen Leiter erzeugt) um die Dipolachse ein Magnetfeld erzeugen. Dieses ist so gerichtet, dass es sich senkrecht zur Stromflussrichtung ausbildet und rotationssymmetrisch ist. Man verallgemeinert, es bilden sich \textbf{konzentrische Äquipotentiallinien} (hier nicht ganz richtig benutzt!)  um den Leiter mit dem Abstand R aus.
+Ampère konnte zeigen, dass die Durchflutung (Strom des Leiters) \textbf{über den Rand einer Fläche} (aufgespannt von einer geschlossenen Feldlinie\footnote{Im Gegensatz zur Elektrostatik gibt es hier tatsächlich geschlossene Feldlinien}) integriert über B eine Proportionalität zum Strom I herstellt. Das Gesetz stellt eine Verbindung zwischen dem Strom durch den es hervorgerufen wurde und der magnetischen Feldstärke, die dier Strom erzeugt.
+\begin{align} \label{eqn:Amperesches Gesetz} 
+\oint \limits_{\partial S} \vec{B} \cdot d\vec{s} = \mu_0 \int \limits \vec{j\left( r \right)} \cdot d\vec{A}
+\end{align}
+Da $\vec{B} \, , d\vec{s}$ parallel zueinander orientiert sind, ist der eingeschlossene Winkel zwischen $\vec{B}$ und $d\vec{s}$ 0. Somit ist folglich das Skalarprodukt betragsmäßig gegeben durch $B \, ds$. Wir können unseren Term für eine leichtere Integration vereinfachen. Zusätzlich ist für $\vec{j\left( r \right)} = \, const.$ und so $I = j \cdot A$. Die Fläche A ist die Fläche, die durch den Rand der geschlossenen Feldlinie aufgespannt ist. So ist es insbesondere auch möglich \textbf{Magnetfelder in Leitern} zu bestimmen. Hierzu betrachtet man den eingeschlossenen Teil des Stroms.
+\begin{align*}
+\boxed{\oint \limits_{\partial S} B \cdot ds = \mu_0 I}
+\end{align*}
+
+\subparagraph{Anwendung} Das Gesetz von Biot-Savart ist zur allgemeinen Bestimmung von B-Feldern geeignet, jedoch nicht um einfache Felder durch symmetrische Objekte wie Kreise etc. zu berechnen. Hier kommt die Stärke des Ampereschen Gesetz. Es gilt für uns nur eine geeignete Symmetrie zu finden und so das Linienintegral zu lösen. Den Rest erledigt für uns die Macht des Integrals. 
+\subparagraph{Kreissymmetrische Stromverteilung} Eine Kreissymmetrische Stromverteilung ist z.B. das B-Feld um einen unendlich lang ausgedehnten Leiter. Zugleich nehmen wir an, dass der Leiter unendlich dünn ist.
+Untersuchen wir eine spezielle Feldlinie, die gerade ihren Kreismittelpunkt im Urpsrung des Koordinatensystems besitzt. Zudem sollte der Leiter in z-Richtung blicken.
+Diese Überlegungen führen dazu, dass nur noch ein eindimensionales Kreisproblem vorliegt (das wäre schon anders, wenn wir den Leiter leicht kippen würde).
+Um nun das B-Feld zu berechnen, das wir an der Äquipotentiallinie des Radius R haben, wollen wir zum ersten mal das Amperesche Gesetz (\ref{eqn:Amperesches Gesetz}) benutzen.
+\begin{align*}
+\oint \limits_{\partial S} \vec{B} \cdot d\vec{s} &= \mu_0 \int \limits \vec{j\left( r \right)} \cdot d\vec{A} \\
+B \int \limits_{0}^{2\pi R}  ds &= \mu_0 I
+\end{align*} Für unser B-Feld um einen \textbf{langen Leiter} ergibt sich also
+\begin{align*}
+B = \frac{\mu_0}{2\pi R} I
+\end{align*}
+
+\subparagraph{Spulen und Amperesches Gesetz} Für Spulen merkt man sich, dass jede einzelne Durchflutung einer Windung aufsummiert wird. Das Gesetz erweitert sich in diesem Fall für N Windungen zu
+\begin{align} \label{eqn:Amperesches Gesetz für Spulen}
+\oint \limits_{\partial S} B \cdot ds = \mu_0 \, N \, I 
+\end{align}
+
+
+\subparagraph{Was ist $\partial S$?} Um diese Frage zu klären wollen wir uns nochmal den \textbf{Stokes'schen Satz} anschauen. Er besagt für ein Vektorfeld $\vec{A}$ gilt
+\begin{align} \label{eqn:Stokes}
+\oint \limits_{\partial S} \vec{A} \cdot d\vec{l} = \int \limits_S \left(\nabla \times \vec{A} \right) \cdot d\vec{S}
+\end{align} Es handelt sich bei $d\vec{S}$ um eine sehr kleines Flächenstück in Richtung des Flächennormalenvektors. $d\vec{l}$ hingegen ist ein Streckenstück, wobei $d\vec{l}$ stets tangential zum und auf dem Rand der Fläche verläuft. $\partial S$ ist bildlich gesprochen z.B. der Umfang eines Kreises. Dies mathematisch korrekt zu beschreiben ist sehr aufwendig. Uns soll hier eine einfache Konvention reichen. Immer wenn wir über den kompletten Rand einer Fläche integrieren wollen, zeigen wir dies durch folgende Konvention:$\oint \limits_{\partial S} \cdots d\vec{l}$.
+
+\subsection{Magnetischer Fluss}
+Im Abschnitt \ref{sec:Amperesches Gesetz} überlegten wir uns, dass es nicht sinnvoll ist eine Hüllkurve um magnetische Erzeuger zu legen. Wirft sich die Frage auf, ob es überhaupt einen magnetischen Fluss geben kann. Die Antwort ist von solch großer Bedeutung, dass wir ihr nochmal einen eigenen Abschnitt widmen wollen. 
+Der Magnetische Fluss verknüpft die Größen der B und E-Felder.
+
+Legen wir um eine veränderliche Leiterschleife mit einem erzeugendem B-Feld eine plane Fläche A. so ergibt sich der magnetische Fluss als
+\begin{align} \label{eqn:magn. fluss}
+\boxed{\Phi_{magn.} = \oint \limits \vec{B} \cdot d\vec{A}}
+\end{align}
+Gemessen wird der magnetische Fluss in $1\, T  \, m^2$ bzw. $1 \, Wb \; \mathrm{(Weber)}$
+
+Für Spulen gilt schon wie im Ampereschen Gesetz (\ref{eqn:Amperesches Gesetz für Spulen}) die Poportionalität zur Windungsanzahl.
+\subparagraph{Ausblick} Ändern sich solche B-Felder zeitlich, dann muss sich natürlich auch der magnetische Fluss ändern. Das alle kennen wir, wenn wir z.B. den belasteten  Netzstecker aus einer stromführenden Steckdose ziehen und eine Funkregen wahrnehmen. Dieses Phänomen vereint die ganze Vielfalt der Elektrodynamik (magn./el. Fluss, Faradaysches Induktionsgesetz)
+
 \subsection{Materie im Magnetfeld}
 \subsubsection{Induzierte Dipole} Diamagnetismus
 \subsubsection{Permanente Dipole}
