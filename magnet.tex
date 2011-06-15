@@ -246,10 +246,85 @@ Für Spulen gilt schon wie im Ampereschen Gesetz (\ref{eqn:Amperesches Gesetz f�
 \subparagraph{Ausblick} Ändern sich solche B-Felder zeitlich, dann muss sich natürlich auch der magnetische Fluss ändern. Das alle kennen wir, wenn wir z.B. den belasteten  Netzstecker aus einer stromführenden Steckdose ziehen und eine Funkregen wahrnehmen. Dieses Phänomen vereint die ganze Vielfalt der Elektrodynamik (magn./el. Fluss, Faradaysches Induktionsgesetz)
 
 \subsection{Materie im Magnetfeld}
-\subsubsection{Induzierte Dipole} Diamagnetismus
+Wir können $\vec{B}$ bekanntlich auch als Vektorpotential von $\vec{A}$ formulieren. Das sah wie folgt aus $\vec{B}(r) = \nabla \times \vec{A}(r)$ wobei $\vec{A}(r) = \frac{\mu_0}{4\pi} \int \frac{\vec{j}(\vec{r}')}{|\vec{r}-\vec{r}'|} d^3 \vec{r}' $.
+Stellt sich die Frage, ob hiermit tatsächlich alle Kreisströme erfasst wurden. Wenn sich Leiter wie Leerrohre und Elektronen wie Murmeln verhalten würden, dann hätten wir keine Probleme, dem ich nicht so. Leiter sind vielmehr Wände mit kleinen porösen Stellen durch die Elektronen Tunneln können. 
+Es stellt sich nämlich heraus, dass wir $\vec{j}(r)$ nicht vollständig kennen.
+Die vereinfachte mikroskopische Betrachtung zeigt die Grundidee. \textbf{Elektronen "`kreisen"'} um feste Bahnen des Atomkerns, ähnlich dem Bohrschen Atommodell. Eine genauere Betrachtung bleibt uns zunächst verwahrt, wird aber im Verlauf des Studiums geklärt. \par
+Unser Vektorfeld $\vec{A}$ setzt sich demnach aus zwei Komponenten zusammen, \textbf{Kreisströme durch den Leiter und Kreisströme der Elektronen}. 
+\begin{align*}
+\vec{A}(r) &= \frac{\mu_0}{4\pi} \int \frac{\vec{j}(\vec{r}')}{|\vec{r}-\vec{r}'|} d^3 \vec{r}'  + \vec{A}_{Materie} \\
+\vec{A}_{Materie} &= \frac{\mu_0}{4\pi} \sum\limits_{Moleküle \, i} \frac{\vec{p}_m \times \left(    \vec{r}-\vec{r}' \right)}{|\vec{r}-\vec{r}'|^3}
+\end{align*}
+Wir definieren zunächst die magnetische Dipoldichte bzw. \textbf{Magnetisierung}\begin{align} \label{eqn:Magnetisierung}
+\vec{M}(r) = \frac{1}{V} \sum\limits_i p_{m,i} =  \sum\limits_i  \frac{p_{m,i} \times \left(    \vec{r}-\vec{r}' \right) }{|\vec{r}-\vec{r}'|^3}
+\end{align}
+
+Für das Vektorpotential ergibt sich im Übergang $\sum \rightarrow \int$
+\begin{align*}
+\vec{A}(r) &= \frac{\mu_0}{4\pi} \int \frac{\vec{j}(\vec{r}')}{|\vec{r}-\vec{r}'|} d^3 \vec{r}'  + \frac{\mu_0}{4\pi} \int \frac{\vec{M}(\vec{r}) \times \left(    \vec{r}-\vec{r}' \right)}{|\vec{r}-\vec{r}'|^3} d^3 \vec{r}'\\
+\vec{A}(r) &= \frac{\mu_0}{4\pi} \int \frac{\vec{j}(\vec{r}')}{|\vec{r}-\vec{r}'|} d^3 \vec{r}'  + \frac{\mu_0}{4\pi} \int \vec{M}(\vec{r}) \times \nabla \frac{ \left(    \vec{r}-\vec{r}' \right)}{|\vec{r}-\vec{r}'|^3} d^3 \vec{r}'\\
+\end{align*}
+Durch explizites rechnen kann man zeigen, dass dann genau die Wirbel des magnetischen Felds wie folgt aussehen
+\begin{align} \label{eqn:HilfsfeldstaerkeRot}
+\rot{\frac{1}{\mu_0 \vec{B} - \vec{M}}} = \vec{j} =: \rot{\vec{H}}
+\end{align}
+Wir haben also für die magnetische \textbf{Hilfsfeldstärke} $\vec{H}$
+\begin{align} \label{eqn:Hilfsfeldstärke}
+\vec{H} &= \frac{1}{\mu_0 } \vec{B} - \vec{M} \\
+\vec{B}	&= \mu_0 \left( \vec{H} + \vec{M}\right)
+\end{align}
+Die magnetischen Wirbel der Hilfsfeldstärke werden ausschließlich durch die makroskopischen Ströme $\vec{j}$ hervorgerufen. Für einen Magneten ohne "`magnetisches Dielektrikum"' ist im Vakuum $\vec{M} = 0$. Es gillt dann also $\vec{B} = \mu_0 \vec{H}$.
+
+\subparagraph{Suzeptibilität} Für sehr viele Stoffe ist die Magnetisierung proportional zur magnetischen Hilfsfeldstärke $\vec{H}$. 
+Den Proportionalitätsfaktor nennen wir die Übernahmefähigkeit bzw. magnetische Suszeptibilität $\chi_m$ .
+\begin{align} \label{eqn:Magnetisierung Hilfsfeld}
+\vec{M} = \chi_m \vec{H}
+\end{align}Eingesetzt in \ref{eqn:Hilfsfeldstärke} ergibt sich für ein B-Feld mit solch einer Suszeptibilität die Permeabilität des Materials mit $\mu = 1+ \chi_m$
+\begin{align} \label{eqn:Permeabilität}
+&\vec{B} = \mu_0 \left( \vec{M} + \vec{H} \right)\\
+&\vec{B}	= \mu_0 \left( \chi_m \vec{H} + \vec{H} \right)\\
+&\boxed{\vec{B}= \mu_0 H \underbrace{\left( 1 + \chi_m \right)}_{\mu}}
+\end{align}$\mu$ bezeichnet die Permeabilität des Materials. Häufig wird hierfür auch der Begriff der \textbf{relativen Permeabilität} benutzt und dann mit $\mu_r$ bezeichnet. \par
+
+\subparagraph{Magnetische Dipole} Sind anschaulich das Äquivalente Gegenstück zum Dielektrikum der Magnetostatik. Man unterscheidet in 3 Sorten von magnetischen Dipolen:
+\begin{itemize}
+\item Induzierte Dipole
+\item Permanente Dipole
+\item Ferromagneten
+\end{itemize}
+\subsubsection{Induzierte Dipole} Einige Materialien wie z.B. Aluminium oder Bismut sind im normalen Zustand völlig unmagnetisch. Gibt man sie jedoch in ein starkes B-Feld, so bewirkt dies in dem Material selber eine Magnetisierung. Diese ist genau so gerichtet, dass sie dem angelegten B-Feld entgegen gerichtet wirkt.
+Sszeptibilitäten solcher \textbf{diamagnetischen Materialien} müssen kleiner 0 sein. So hat z.B. Wasser eine Suszeptibilität von $\chi_m \approx -0.72 \cdot 10^{-6}$. \par
+
+Supraleiter nehmen eine besondere Sparte der diamagnetischen Materialien ein. ihre Suszeptibilität reicht bis $ \chi_m = -1$. Eingesetzt in Gleichung \ref{eqn:Hilfsfeldstärke} bedeutet dies, dass Supraleiter im Inneren stets feldfrei sind. Man benutzt hierfür den Begriff des \textbf{ idealen Diamagnetismus}
 \subsubsection{Permanente Dipole}
+Stoffe mit \textbf{positiven Suszeptibilitäten} bezeichnet man als permanente Dipole. Die ist zugegeben ein wenig irreführend, die diese Dipole ohne ein äußeres Feld vollkommen ungeordnet sind. Legt man ein äußeres B-Feld an, so richten sich die einzelnen Dipole aus und unterstützen so das magnetische Feld.
+Man findet zudem, dass die Ausrichtung von der Temperatur abhängig ist. Ab einer gewissen inneren thermischen Energie wird der Dipol in einen ungeordneten Zustand übergehen, in dem trotz äußeres magnetisches Feld keine Magnetisierung mehr auftritt. 
+\subparagraph{Curie-Gesetz} Für \textbf{Paramagnetische Stoffe} gilt das Curie-Gesetz. \\
+Es besagt, dass die Suszeptibilität $\chi_m \approx \frac{C}{T}$ ist. C ist hierbei eine feste Konstante $\mu_0 \tfrac{N}{V} \frac{\mu^2}{3k_B} $ und T die Materialtemperatur gemessen in Kelvin.
+\begin{align} \label{eqn:Curie-Gesetz}
+\boxed{\chi_m \approx \mu_0 \tfrac{N}{V} \frac{\mu^2}{3k_B \cdot T}}
+\end{align}
 \subsubsection{Ferromagnetismus}
-\subparagraph{Hysteresekurve}
-\subparagraph{Steighöhe}
+\textit{Ohne Feld} besitzen Eisen , Nickel und Cobalt oberhalb der Curie-Temperatur ein magnetisches Moment. Unterhalb dieser Temperatur bilden sich lokal Magnetisierungen aus. Diese \textbf{ferromagnetischen Domänen} bzw. \textbf{Weißschen-Bezirke} führen trotzdem zu keiner Gesamtmagnetisierung.
+
+\textit{In einem B-Feld} wachsen die ferromagnetischen Domänen an und prägen sich weiter aus, die Magnetisierung zeigt dabei stets in Feldrichtung des angelegten Feld und verstärkt dieses in seiner Wirkung.
+\subparagraph{Hysteresekurve}(Abb. \ref{pic:Hysterese})
+Trägt man die Magnetisierung gegen das angelegte Feld auf,  so ergibt sich eine Hystereskurve bzw. Hystereseschleife.
+\begin{figure}\begin{center}
+\includegraphics[scale=0.5]{img/hysterese}\end{center}
+\caption{Theoretische Hysteresekurve mit Neukurve }
+\label{pic:Hysterese}
+\end{figure}
+
+Wir können die Hystereseschleife in 3 Teile unterteilen
+\begin{description}
+\item[\kreis{1}] Wir starten mit einer zunächst völlig unmagnetischen Probe und legen von außen nun ein B-Feld an. Die Probe wir zunehmend Magnetisiert, bis sich eine Sättigungsmagnetisierung ($\mu_0  \, M$) einstellt. Dann sind fast alle Dipole ausgerichtet.
+
+\item[\kreis{2}] Wir regeln langsam das B-Feld zurück und kehren es in seiner Feldrichtung um. Wir stellen fest, dass die Probe magnetisch ist, obwohl wir kein magnetisches Feld angelegt haben. Diesen restlichen Magnetismus  bezeichnen wir als \textbf{Remanenz} des Stoffes. Regeln wir das Feld wieder stärker ( in der Richtugn jetzt jedoch umgepolt) gibt es einen Punkt, an dem unsere Probe wie unmagnetisch wird. Diesen Punkt nennen wir  \textbf{Koerzitivfeldstärke}.
+\item[\kreis{3}] siehe \kreis{2}
+\end{description}
+
+
+
 
 \section{Maxwellgleichungen}
