@@ -127,6 +127,11 @@
 \newcommand{\grad}{\ensuremath{\mathrm{grad\,}}} 
 \newcommand{\Fdiv}{\ensuremath{\mathrm{div\,}}} 
 \newcommand{\rot}[1]{\ensuremath{\mathrm{rot\left({#1}\right)}}} 
+\newcommand{\ddt}{\ensuremath{\frac{d }{dt} \,  }} 
 %%% eigene Farben
 \definecolor{hellgrau}{gray}{0.85}
 %\colorbox{hellgrau}{\parbox{\textwidth}{Hier der Text, der in der Box erscheinen soll}}
+
+\definecolor{myColor}{rgb}{0.9,0.9,0.9}% Wir definieren im RGB-Farbraum
+\newcommand{\gesetz}[1]{ \colorbox{myColor}{\parbox{\columnwidth}{#1}} }
+\newcommand{\formel}[1]{\fbox{\parbox{\textwidth}{#1}} }
