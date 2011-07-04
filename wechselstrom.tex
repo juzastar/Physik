@@ -1,0 +1,72 @@
+\newpage
+\section{Wechselfelder}
+
+\subsection{Stromerzeugung}
+\paragraph{Wechselstromgenerator}
+\begin{align} \label{eqn:Wechselstromgenerator}
+U_{ind} = \omega B  A \cos \left( \omega \, t \right)
+\end{align}
+
+\paragraph{mittlere Leistungsabgabe}
+\begin{align} \label{eqn:Leistung}
+\bar{P} &= \frac{1}{T} \int \limits_0^T P_{el} \, dt \\
+		&= \frac{1}{T} \int \limits_0^T U_0 I_0 \cos^2 \omega t dt \\
+\boxed{\bar{P}	= \frac{1}{2} U_0 I_0}
+\end{align}
+
+\subsection{Wechselstromkreise}
+Für eine rein induktive Last ist der Stromfluss gegenüber der Wechselspannung um $\frac{\pi}{2} $ verzögert.
+
+\subsection{Wechselstrom als komplexe Größe}
+Man wählt den Ansatz mit $U(t) = U_0 \exp (i \omega t) $.
+Für die elementaren Bauelemente ergeben sich dann  die\textbf{ Impedanzen / Admittanzen} zu
+\par \gesetz{\begin{align} \label{eqn:Wechselstromwiderstände}
+Z_c &= \frac{1}{i \omega C} \\
+Y_c &= i \omega C \\
+Z_L &= i \omega L \\
+Y_L &= \frac{1}{i \omega L}\\
+\tan \phi &= \frac{Im(Z)}{Re(Z)}\\
+|Z| &= \sqrt{Re(Z)^2 + Im(Z)^2}
+\end{align}}
+
+\subsection{Thomsonscher Schwingkreis}
+Es ergibt sich für eine Reihenschaltung von R, C, L ein schwingkreis der sich ähnlich dem eines harmonischen Oszillators verhält.
+Es ergibt sich die Differentialgleichung
+\begin{align} \label{eqn:ThomsonDGL}
+\ddot{I} + \frac{R}{L} + \frac{1}{LC}I = 0
+\end{align}
+Für solche eine Schwingungsgleichung ergibt sich eine Lösung wie im Falle des frei gedämpften harmonischen Oszillator mit $\gamma = \frac{R}{2L}$ und $\omega_0 = \sqrt{\frac{1}{LC}} $, sowie $\beta = \sqrt{\gamma^2 - \omega_0^2} = \sqrt{\frac{R^2}{4L^2} - \frac{1}{LC}}$
+\subparagraph{Lösung der DGL nach I(t)}
+\begin{align} \label{eqn:ThomsonDGLLoes}
+I(t) = \exp \left(- \gamma t \right) \left[  A_1 \exp ( \beta t) + A_2 \exp (- \beta t)        \right]
+\end{align}
+es ergeben sich die 3 Fälle zwischen Dämpfung und Eigenfrequenz 
+\begin{itemize}
+\item schwache Dämpfung $\gamma < \omega_0 \rightarrow R^2 < \frac{4L}{C}$
+\item starke Dämpfung $\gamma > \omega_0$
+\item aperiodischer Grenzfall $\gamma = \omega_0$
+\end{itemize}
+
+\paragraph{Erzwungene Schwingung}
+Ein Thomsonscher Schwingkreis mit U, R, C, L. Nach der Maschenregel führt uns dies zu
+\begin{align} \label{eqn:gezThomsonDGL}
+\boxed{\ddot{I} + \frac{R}{L} \dot{I} + \frac{1}{LC} I = \frac{U_0 \omega}{L} \sin \omega t}
+\end{align}
+Die wichtige Resonanzfrequenz in der Resonanzkatastrophe \footnote{bachte: Hier nehmen wir an, dass ein Leiter keinen Widerstand und damit auch keine Dämpfung besitzt} befindet sich bei $\gamma = 0 \qquad \omega_0 = \omega$
+
+\subsection{Transformation}
+\paragraph{Stromkreis 1}
+Zwei Spulen mit gleichen Induktivitäten haben wir schon bei der gegenseitigen Induktion zweier Spulen gehabt. hier war die transformierte Spannung näherungsweise der Ausgangsspannung äquivalent
+\begin{align} \label{eqn:Trafo_Strom1}
+U_{ind} = - L_1 \ddt I = - N_1 \ddt \Phi_1 
+\end{align}
+\paragraph{Stromkreis 2}
+Nehmen wir eine idealer Ankopplung der zweiten Spule durch ein Eisenjoch an, so ergibt sich, dass der magnetische Fluss beider Spulen gleich sein muss. Es gilt also $\Phi_1 = \Phi_2$. 
+\begin{align} \label{eqn:Trafo_Strom2}
+\ddt \Phi_1 &= \ddt \Phi_2\\
+U_2 = N_2 \ddt \Phi_2 &= \frac{N_2}{N_1} U_{ind}
+\end{align}
+Die allgemeine Zauberformel findet man als Verhältnis beider Wicklungen und den Spannungen
+\begin{align} \label{eqn:Trafo_Formel}
+\boxed{\frac{U_1}{U_2} = - \frac{N_1}{N_2}}
+\end{align}

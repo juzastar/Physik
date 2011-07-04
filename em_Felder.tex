@@ -1,0 +1,129 @@
+\newpage
+\section{Elektromagnetische Felder}
+
+Michael Faraday geniale Fähigkeit war es 1831 die herausgegriffenen Induktionsphänomene früherer Forscher zu erklären und durch modifizierte Maxwellegleichungen zu beschreiben. Glaubt man zunächst mit den vier Maxwellgleichungen alle elektrischen und magnetischen Felder beschreiben zu können.  \par
+
+Auch wir haben bisher die Phänomene der Elektrostatik und Magnetostatik separat betrachtet.
+Ladungen führten hierbei zu Quellen und Senken elektrischer Felder, Ströme hingegen waren die Ursache magnetischer Wirkung.
+Betrachten wir nun zeitabhängige E und B-Felder. Diese sind nun nur noch für einen gewählten Zeitpunkt und festen Ort statisch, insgesamt jedoch höchst \textbf{nicht stationär}. 
+\subsection{Faraday'sches Induktionsgesetz}
+Das Gesetz von Biot-Savart lieferte uns die Idee, dass elektrische Ströme Wirbel magnetischer Feldstärken sind.
+Faraday stellte sich derweil die Frage, ob umgekehrt zeitlich veränderbare B-Felder auch E-Felder hervorrufen.
+Aus seinen Versuchen folgerte er das Faraday'sche Induktionsgesetz
+ 
+\gesetz{Ändert sich der magnetische Fluss $ \Phi $  durch eine Leiterschleife, wird in ihr eine Spannung / Strom erzeugt induziert. Wobei die zeitliche Änderung $\dot{\Phi} $ proportional zur induzierten Spannung / Strom ist.}
+
+Eine induzierte Spannung ist automatisch mit der Existenz eines E-Feldes verknüpft. Erinnern wir uns an die Definition des elektrischen Potentials und überlegen ob diese hier noch gilt. Es galt $U = \int \vec{E} \cdot d\vec{s}$. Leider ist dieses Potential für zeitlich veränderbare E-Felder \textbf{nicht mehr konservativ}, allerdings ergibt sich eine Potentialdifferenz innerhalb der Leiterschleife mit
+\begin{align*}
+U = \oint \vec{E} \cdot d\vec{s} = \int \nabla \times d\vec{A}
+\end{align*}
+Sich zeitlich ändernde B-Felder erzeugen die Wirbel von E-Feldern. Wir wollen uns überlegen, ob die induzierte Spannung tatsächlich von der Änderung des Flusses abhängig ist.
+Wir werden dazu im Schritt 2 den \textbf{Satz von Stokes} benutzen
+
+\begin{align} \label{eqn:InduktionsspannungHerleitung}
+\nabla \times \vec{E} &= - \ddt\vec{B} \\
+\oint \vec{E} \cdot d\vec{s} &\overset{Stokes}{=} - \int \ddt\vec{B} \cdot d\vec{A} \\
+\oint \vec{E} \cdot d\vec{s} &= - \ddt{} \underbrace{\int \vec{B} \cdot d\vec{A}}_{\Phi} 
+\end{align} Für die Induktionsspannung ergibt sich also
+\begin{align} \label{eqn:Induktionsspannung}
+\boxed{U_{ind} = - \ddt \Phi =  -\dot{\Phi}}
+\end{align}
+
+\subsection{Lenz'sche Regel}
+Warum denn überhaupt ein Minus? \par 
+Schieben wir einen Stabmagneten mit dem "`Norden"' orientiert in Bewegungsrichtung nach vorne in eine Leiterschleife. Die Fläche unserer Flussfläche halten wir fest, so können wir uns ganz auf die Erscheinungen durch das zeitlich veränderliche B-Feld konzentrieren.
+
+\begin{figure}[htbp]\begin{center}
+\includegraphics[scale=0.7]{img/lenz.png}\end{center}
+\caption{Richtung des induzierten Stromes eines Rings. Anhand eines Stabmagneten.Quelle: \textit{Gerthsen 2010 Abb 7.10 a/b}}
+\label{pic:Lenz}
+\end{figure}
+
+Das B-Feld eines Stabmagneten ist typischerweise inhomogen (Abb. \ref{pic:Lenz}).
+Führen wir den Stabmagneten in die Schleife ein, so wird der Fluss durch die Fläche zunehmen (A ist positiv, sowie B ist positiv). Ein Strom wird in die Schleife nach dem Faradayschen Induktionsgesetz induziert.
+Bleibt die Frage, wie sich der Strom orientiert. Dies beschreibt die \textbf{Lenz'sche Regel}. \par
+
+
+
+
+\begin{description}
+\item[Ansteigender Fluss]Wird die Induktionsspannung durch einen ansteigenden Fluss verursacht, dann möchte das Feld der Induktionsspannung diesem Fluss entgegenwirken indem es \textbf{schwächt}.\\
+$\vec{B}_{ind}$ und $\vec{B}$ \textbf{verlaufen antiparallel}.
+\item[Abfallender Fluss]Wird die Induktionsspannung durch einen abfallenden Fluss verursacht, versucht das Feld er Induktionsspannung den Fluss aufrecht zu halten und zu \textbf{verstärken} und damit die Änderung zu verringern.\\
+$\vec{B}_{ind}$ und $\vec{B}$ \textbf{verlaufen} hier \textbf{parallel}.
+\end{description}
+
+
+\subsubsection{Wirbelströme}
+Ein \textbf{Waltenhof-Pendel} besteht aus einer dicken Kupferplatte, die freischwingend in einem Schaukelaufbau gelagert ist. Hierbei kann die Kupferplatte vernachlässigbar reibungsfrei durch die Polschuhe eines Elektromagneten schwingen.
+Schalten wir nun den Strom des Elektromagneten ein. Unmittelbar wird sich rasch ein Magnetfeld aufbauen \footnote{vorausgesetzt der Experimentator hat eine Wechselspannung angelegt}. Lenken wir das Pendel nun aus und beobachten das Schwinungsverhalten.
+Ähnlich dem aperiodischen Grenzfall ist je nach B-Feld eine starke Dämpfung anzunehmen, das Pendel steht schon nach wenigen Schwingungen still.
+Man darf sich zurecht die Frage stellen, welche Kraft das Pendel beruhigt hat, schließlich können wir eine starke Reibung ausschließen.
+
+\paragraph{Der Effekt:} Bewegt sich die Kupferplatte in einem \textbf{inhomogenen B-Feld}, so wird ständig eine Spannung induziert. Dies liegt vor allem daran, dass die Änderung des Flusses hauptsächlich durch das inhomogene B-Feld abhängig ist. 
+Gerade diese induzierte Spannung ist es, die einen \textbf{Kreisstrom} an den äußersten Randflächen (Umfang der Platte) hervorruft. \\
+Betrachten wir jetzt die Kreisströme auf Molekularebene, so lässt sich feststellen, dass gerade hier kleine Kreisströme induziert werden. 
+Diese Ströme rufen \textbf{Wirbel von E-Feldern} hervor. Und nennen sie \textbf{Wirbelströme} ($ \mathrm{rot} \, \vec{E} $). Wirbelströme werden nun jedoch durch die wirkende Lorentzkraft (\ref{eqn:Lorentzkraft E-Feld}) sukzessiv gebremst. Hierbei wird die freiwerdende Energie fast komplett in thermische Energie der Kupferplatte umgesetzt.
+
+Bremsen ohne direkten Materialkontakt findet auf diese Weise Anwendung in Wirbelstrombremsen, die man häufig in modernen LKWs und Bussen vorfinden kann.d
+
+\paragraph{Beispiel: Wechselstromgenerator}
+
+
+\subsection{Induktivität}
+Betrachten wir jetzt Spulen und die Eigenschaften, die sich durch die Induktionseigenschaften ergeben.
+Uns interessiert insbesondere die Frage, ob Spulen als Ursache von Magnetfeldern und bestimmten Voraussetzungen auch selber wieder einen Strom induzieren.
+
+Durch die faraday'schen Eigenschaften von stromdurchflossen Leitern und insbesondere damit auch Spulen dürfen wir die Betrachtung der Erzeugung und Induzierung nicht getrennt betrachten. 
+Für den Fluss einer Spule gilt (ohne Herleitung) 
+
+
+\begin{align} \label{eqn:FlussSpule}
+\Phi &= L I \\
+U_{ind} &= -\dot{\Phi} = - L \dot{I}
+\end{align}
+
+Mit Hilfe der Lenz'schen Regel stellen wir fest, dass ein an ansteigender Strom in der Spule gleichzeitig zu einem ansteigenden Fluss führen muss. 
+Dieser Fluss ist es jedoch der in benachbarten Windungen eine Spannung induziert (getreu dem Faraday'schen Induktionsgesetz).
+Diese Spannung ist nun so gerichtet, dass sie \textbf{dem Anstieg entgegenwirkt}.
+Sinkt der Strom in der Spule ab (z.B. in Folge einer Stromtrennung), so folgt nach obiger Überlegung ,dass die umliegenden Windungen dem absinkenden Fluss entgegenwirken und ein starkes Feld aufbauen. \footnote{Bei solchen Vorgängen kann man z.B. einen Funken - Lichtbogen beobachten, der in Folge des sich schnell aufbauenden Felds ergibt}
+Wir nennen dieses Verhalten die \textbf{Selbstinduktion }einer Spule und $L$ die \textbf{Selbstinduktivität}.
+
+\paragraph{Beispiel: Induktivität einer Spule}
+\paragraph{Beispiel: Induktivität in RL-Kreisen}
+
+\subsection{Energiedichte im Magnetfeld}
+Ähnlich der Energiedichte in elektrischen Felder (\ref{eqn:Energiedichte}) wollen wir diesen Begriff uns näher im Zusammenhang mit Magnetfeldern betrachten. 
+Nehmen wir an, dass in einer Leiterschleife (mit der Windung 1) ein Spannung induziert wird. In diesem Feld möchten wir nun eine Ladung $dQ$ bewegen.
+
+\begin{align*}
+dW 	&= - U_{ind} \, dQ \\
+dW	&= L \ddt{I} \, dQ =  L I \, dI \qquad \bigg| \; \int
+\end{align*}
+Für die Gesamte potentielle magnetische Energie in einer Spule gilt dann
+\begin{align} \label{eqn:magnEnergie}
+\boxed{W = \frac{1}{2}L\, I^2}
+\end{align}
+Für die Energiedichte verfahren wir wie im elektrostatischen Fall, indem wir zunächst eine spezielle Geometrie betrachten und dann diese Formel für jede Geometrie benutzen (ohne Herleitung).
+
+Wir benutzen eine Spule mit den folgenden Eigenschaften
+\begin{align*}
+L = \mu_0 \frac{N^2}{l^2}V \\
+B = \mu_0 \frac{N}{L}I \\
+I
+\end{align*}
+Nach \ref{magnEnergie} gilt für die magnetische Energie
+\begin{align*}
+W &= \frac{1}{2}L\, I^2 = \frac{1}{2} \mu_0 \frac{N^2}{l^2}V \, I^2 \\
+W &= \frac{1}{2 \mu_0} B^2 V
+\end{align*}
+Für jedes magnetische Feld ergibt sich die magnetische Energiedichte als Energie pro Volumen V.
+\begin{align} \label{eqn:magnEnergiedichte}
+\boxed{w_{mag} = \frac{W}{V} = \frac{1}{2 \mu_0}B^2}
+\end{align}
+
+\subsection{Der Verschiebungsstrom}
+Zeitlich veränderliche E-Felder implizieren ein B-Feld welches sie hervorrufen.
+\begin{align} \label{eqn:Verschiebungsstromdichte}
+\vec{j}_v = \epsilon_0 \ddt{\vec{E}}
+\end{align}
